@@ -1,0 +1,590 @@
+{
+  "_meta": {
+    "competition": "UEFA Champions League 2026/27",
+    "source": "UEFA league-phase list and coefficient pots",
+    "elo_note": "elo_seed = 1480 + 3.6 * UEFA coefficient. ClubElo CSV replaces this when the file is present."
+  },
+  "clubs": {
+    "PSG": {
+      "id": "PSG",
+      "name": "Paris Saint-Germain",
+      "country": "FRA",
+      "domestic_league_id": 61,
+      "api_football_id": 85,
+      "coefficient": 132.0,
+      "elo_seed": 1955.2,
+      "elo": 1955.2,
+      "transfermarkt_slug": "paris-saint-germain",
+      "pot": 1,
+      "aliases": [
+        "Paris",
+        "PSG"
+      ],
+      "squad_value_eur": 840000000
+    },
+    "BAY": {
+      "id": "BAY",
+      "name": "Bayern Munich",
+      "country": "GER",
+      "domestic_league_id": 78,
+      "api_football_id": 157,
+      "coefficient": 147.5,
+      "elo_seed": 2011.0,
+      "elo": 2011.0,
+      "transfermarkt_slug": "fc-bayern-munchen",
+      "pot": 1,
+      "aliases": [
+        "Bayern",
+        "Bayern München"
+      ],
+      "squad_value_eur": 920000000
+    },
+    "RMA": {
+      "id": "RMA",
+      "name": "Real Madrid",
+      "country": "ESP",
+      "domestic_league_id": 140,
+      "api_football_id": 541,
+      "coefficient": 144.5,
+      "elo_seed": 2000.2,
+      "elo": 2000.2,
+      "transfermarkt_slug": "real-madrid",
+      "pot": 1,
+      "aliases": [
+        "Real Madrid"
+      ],
+      "squad_value_eur": 1250000000
+    },
+    "LIV": {
+      "id": "LIV",
+      "name": "Liverpool",
+      "country": "ENG",
+      "domestic_league_id": 39,
+      "api_football_id": 40,
+      "coefficient": 130.0,
+      "elo_seed": 1948.0,
+      "elo": 1948.0,
+      "transfermarkt_slug": "fc-liverpool",
+      "pot": 1,
+      "aliases": [
+        "Liverpool"
+      ],
+      "squad_value_eur": 860000000
+    },
+    "INT": {
+      "id": "INT",
+      "name": "Inter",
+      "country": "ITA",
+      "domestic_league_id": 135,
+      "api_football_id": 505,
+      "coefficient": 127.0,
+      "elo_seed": 1937.2,
+      "elo": 1937.2,
+      "transfermarkt_slug": "inter-mailand",
+      "pot": 1,
+      "aliases": [
+        "Inter Milan",
+        "Internazionale"
+      ],
+      "squad_value_eur": 620000000
+    },
+    "MCI": {
+      "id": "MCI",
+      "name": "Manchester City",
+      "country": "ENG",
+      "domestic_league_id": 39,
+      "api_football_id": 50,
+      "coefficient": 125.5,
+      "elo_seed": 1931.8,
+      "elo": 1931.8,
+      "transfermarkt_slug": "manchester-city",
+      "pot": 1,
+      "aliases": [
+        "Man City"
+      ],
+      "squad_value_eur": 1180000000
+    },
+    "ARS": {
+      "id": "ARS",
+      "name": "Arsenal",
+      "country": "ENG",
+      "domestic_league_id": 39,
+      "api_football_id": 42,
+      "coefficient": 119.0,
+      "elo_seed": 1908.4,
+      "elo": 1908.4,
+      "transfermarkt_slug": "fc-arsenal",
+      "pot": 1,
+      "aliases": [
+        "Arsenal"
+      ],
+      "squad_value_eur": 1050000000
+    },
+    "BAR": {
+      "id": "BAR",
+      "name": "Barcelona",
+      "country": "ESP",
+      "domestic_league_id": 140,
+      "api_football_id": 529,
+      "coefficient": 113.25,
+      "elo_seed": 1887.7,
+      "elo": 1887.7,
+      "transfermarkt_slug": "fc-barcelona",
+      "pot": 1,
+      "aliases": [
+        "Barcelona"
+      ],
+      "squad_value_eur": 980000000
+    },
+    "ATM": {
+      "id": "ATM",
+      "name": "Atlético Madrid",
+      "country": "ESP",
+      "domestic_league_id": 140,
+      "api_football_id": 530,
+      "coefficient": 104.75,
+      "elo_seed": 1857.1,
+      "elo": 1857.1,
+      "transfermarkt_slug": "atletico-madrid",
+      "pot": 1,
+      "aliases": [
+        "Atletico Madrid",
+        "Atlético de Madrid"
+      ],
+      "squad_value_eur": 560000000
+    },
+    "DOR": {
+      "id": "DOR",
+      "name": "Borussia Dortmund",
+      "country": "GER",
+      "domestic_league_id": 78,
+      "api_football_id": 165,
+      "coefficient": 100.75,
+      "elo_seed": 1842.7,
+      "elo": 1842.7,
+      "transfermarkt_slug": "borussia-dortmund",
+      "pot": 2,
+      "aliases": [
+        "Dortmund"
+      ],
+      "squad_value_eur": 480000000
+    },
+    "ROM": {
+      "id": "ROM",
+      "name": "Roma",
+      "country": "ITA",
+      "domestic_league_id": 135,
+      "api_football_id": 497,
+      "coefficient": 97.75,
+      "elo_seed": 1831.9,
+      "elo": 1831.9,
+      "transfermarkt_slug": "as-rom",
+      "pot": 2,
+      "aliases": [
+        "AS Roma"
+      ],
+      "squad_value_eur": 400000000
+    },
+    "SCP": {
+      "id": "SCP",
+      "name": "Sporting CP",
+      "country": "POR",
+      "domestic_league_id": 94,
+      "api_football_id": 228,
+      "coefficient": 84.0,
+      "elo_seed": 1782.4,
+      "elo": 1782.4,
+      "transfermarkt_slug": "sporting-lissabon",
+      "pot": 2,
+      "aliases": [
+        "Sporting"
+      ],
+      "squad_value_eur": 300000000
+    },
+    "AVL": {
+      "id": "AVL",
+      "name": "Aston Villa",
+      "country": "ENG",
+      "domestic_league_id": 39,
+      "api_football_id": 66,
+      "coefficient": 83.0,
+      "elo_seed": 1778.8,
+      "elo": 1778.8,
+      "transfermarkt_slug": "aston-villa",
+      "pot": 2,
+      "aliases": [
+        "Aston Villa"
+      ],
+      "squad_value_eur": 390000000
+    },
+    "POR": {
+      "id": "POR",
+      "name": "Porto",
+      "country": "POR",
+      "domestic_league_id": 94,
+      "api_football_id": 212,
+      "coefficient": 80.75,
+      "elo_seed": 1770.7,
+      "elo": 1770.7,
+      "transfermarkt_slug": "fc-porto",
+      "pot": 2,
+      "aliases": [
+        "FC Porto"
+      ],
+      "squad_value_eur": 310000000
+    },
+    "MUN": {
+      "id": "MUN",
+      "name": "Manchester United",
+      "country": "ENG",
+      "domestic_league_id": 39,
+      "api_football_id": 33,
+      "coefficient": 76.5,
+      "elo_seed": 1755.4,
+      "elo": 1755.4,
+      "transfermarkt_slug": "manchester-united",
+      "pot": 2,
+      "aliases": [
+        "Man United"
+      ],
+      "squad_value_eur": 740000000
+    },
+    "BRU": {
+      "id": "BRU",
+      "name": "Club Brugge",
+      "country": "BEL",
+      "domestic_league_id": 144,
+      "api_football_id": 569,
+      "coefficient": 75.25,
+      "elo_seed": 1750.9,
+      "elo": 1750.9,
+      "transfermarkt_slug": "club-brugge-kv",
+      "pot": 2,
+      "aliases": [
+        "Club Brugge"
+      ],
+      "squad_value_eur": 210000000
+    },
+    "BET": {
+      "id": "BET",
+      "name": "Real Betis",
+      "country": "ESP",
+      "domestic_league_id": 140,
+      "api_football_id": 543,
+      "coefficient": 74.5,
+      "elo_seed": 1748.2,
+      "elo": 1748.2,
+      "transfermarkt_slug": "real-betis-sevilla",
+      "pot": 2,
+      "aliases": [
+        "Betis"
+      ],
+      "squad_value_eur": 180000000
+    },
+    "PSV": {
+      "id": "PSV",
+      "name": "PSV Eindhoven",
+      "country": "NED",
+      "domestic_league_id": 88,
+      "api_football_id": 197,
+      "coefficient": 71.25,
+      "elo_seed": 1736.5,
+      "elo": 1736.5,
+      "transfermarkt_slug": "psv-eindhoven",
+      "pot": 2,
+      "aliases": [
+        "PSV"
+      ],
+      "squad_value_eur": 230000000
+    },
+    "FEY": {
+      "id": "FEY",
+      "name": "Feyenoord",
+      "country": "NED",
+      "domestic_league_id": 88,
+      "api_football_id": 209,
+      "coefficient": 71.0,
+      "elo_seed": 1735.6,
+      "elo": 1735.6,
+      "transfermarkt_slug": "feyenoord-rotterdam",
+      "pot": 3,
+      "aliases": [
+        "Feyenoord"
+      ],
+      "squad_value_eur": 175000000
+    },
+    "LIL": {
+      "id": "LIL",
+      "name": "Lille",
+      "country": "FRA",
+      "domestic_league_id": 61,
+      "api_football_id": 79,
+      "coefficient": 68.75,
+      "elo_seed": 1727.5,
+      "elo": 1727.5,
+      "transfermarkt_slug": "losc-lille",
+      "pot": 3,
+      "aliases": [
+        "LOSC"
+      ],
+      "squad_value_eur": 185000000
+    },
+    "BOD": {
+      "id": "BOD",
+      "name": "Bodø/Glimt",
+      "country": "NOR",
+      "domestic_league_id": 103,
+      "api_football_id": null,
+      "coefficient": 64.0,
+      "elo_seed": 1710.4,
+      "elo": 1710.4,
+      "transfermarkt_slug": "fk-bodo-glimt",
+      "pot": 3,
+      "aliases": [
+        "Bodo/Glimt",
+        "Bodo Glimt"
+      ],
+      "squad_value_eur": 55000000
+    },
+    "NAP": {
+      "id": "NAP",
+      "name": "Napoli",
+      "country": "ITA",
+      "domestic_league_id": 135,
+      "api_football_id": 492,
+      "coefficient": 63.0,
+      "elo_seed": 1706.8,
+      "elo": 1706.8,
+      "transfermarkt_slug": "ssc-neapel",
+      "pot": 3,
+      "aliases": [
+        "Napoli"
+      ],
+      "squad_value_eur": 430000000
+    },
+    "RBL": {
+      "id": "RBL",
+      "name": "RB Leipzig",
+      "country": "GER",
+      "domestic_league_id": 78,
+      "api_football_id": 173,
+      "coefficient": 61.0,
+      "elo_seed": 1699.6,
+      "elo": 1699.6,
+      "transfermarkt_slug": "rasenballsport-leipzig",
+      "pot": 3,
+      "aliases": [
+        "Leipzig"
+      ],
+      "squad_value_eur": 360000000
+    },
+    "VIL": {
+      "id": "VIL",
+      "name": "Villarreal",
+      "country": "ESP",
+      "domestic_league_id": 140,
+      "api_football_id": 533,
+      "coefficient": 59.0,
+      "elo_seed": 1692.4,
+      "elo": 1692.4,
+      "transfermarkt_slug": "fc-villarreal",
+      "pot": 3,
+      "aliases": [
+        "Villarreal"
+      ],
+      "squad_value_eur": 240000000
+    },
+    "FEN": {
+      "id": "FEN",
+      "name": "Fenerbahçe",
+      "country": "TUR",
+      "domestic_league_id": 203,
+      "api_football_id": 611,
+      "coefficient": 57.75,
+      "elo_seed": 1687.9,
+      "elo": 1687.9,
+      "transfermarkt_slug": "fenerbahce",
+      "pot": 3,
+      "aliases": [
+        "Fenerbahce"
+      ],
+      "squad_value_eur": 190000000
+    },
+    "SHK": {
+      "id": "SHK",
+      "name": "Shakhtar Donetsk",
+      "country": "UKR",
+      "domestic_league_id": 333,
+      "api_football_id": 550,
+      "coefficient": 56.25,
+      "elo_seed": 1682.5,
+      "elo": 1682.5,
+      "transfermarkt_slug": "schachtar-donezk",
+      "pot": 3,
+      "aliases": [
+        "Shakhtar"
+      ],
+      "squad_value_eur": 110000000
+    },
+    "GAL": {
+      "id": "GAL",
+      "name": "Galatasaray",
+      "country": "TUR",
+      "domestic_league_id": 203,
+      "api_football_id": 645,
+      "coefficient": 53.5,
+      "elo_seed": 1672.6,
+      "elo": 1672.6,
+      "transfermarkt_slug": "galatasaray",
+      "pot": 3,
+      "aliases": [
+        "Galatasaray"
+      ],
+      "squad_value_eur": 200000000
+    },
+    "SLP": {
+      "id": "SLP",
+      "name": "Slavia Prague",
+      "country": "CZE",
+      "domestic_league_id": 345,
+      "api_football_id": null,
+      "coefficient": 44.0,
+      "elo_seed": 1638.4,
+      "elo": 1638.4,
+      "transfermarkt_slug": "slavia-prag",
+      "pot": 4,
+      "aliases": [
+        "Slavia Praha"
+      ],
+      "squad_value_eur": 70000000
+    },
+    "SLO": {
+      "id": "SLO",
+      "name": "Slovan Bratislava",
+      "country": "SVK",
+      "domestic_league_id": 332,
+      "api_football_id": null,
+      "coefficient": 36.0,
+      "elo_seed": 1609.6,
+      "elo": 1609.6,
+      "transfermarkt_slug": "sk-slovan-bratislava",
+      "pot": 4,
+      "aliases": [
+        "Slovan"
+      ],
+      "squad_value_eur": 32000000
+    },
+    "STU": {
+      "id": "STU",
+      "name": "VfB Stuttgart",
+      "country": "GER",
+      "domestic_league_id": 78,
+      "api_football_id": 172,
+      "coefficient": 27.5,
+      "elo_seed": 1579.0,
+      "elo": 1579.0,
+      "transfermarkt_slug": "vfb-stuttgart",
+      "pot": 4,
+      "aliases": [
+        "Stuttgart"
+      ],
+      "squad_value_eur": 330000000
+    },
+    "AEK": {
+      "id": "AEK",
+      "name": "AEK Athens",
+      "country": "GRE",
+      "domestic_league_id": 197,
+      "api_football_id": null,
+      "coefficient": 24.0,
+      "elo_seed": 1566.4,
+      "elo": 1566.4,
+      "transfermarkt_slug": "aek-athen",
+      "pot": 4,
+      "aliases": [
+        "AEK"
+      ],
+      "squad_value_eur": 48000000
+    },
+    "LAS": {
+      "id": "LAS",
+      "name": "LASK",
+      "country": "AUT",
+      "domestic_league_id": 218,
+      "api_football_id": null,
+      "coefficient": 21.0,
+      "elo_seed": 1555.6,
+      "elo": 1555.6,
+      "transfermarkt_slug": "lask",
+      "pot": 4,
+      "aliases": [
+        "LASK Linz"
+      ],
+      "squad_value_eur": 28000000
+    },
+    "COM": {
+      "id": "COM",
+      "name": "Como",
+      "country": "ITA",
+      "domestic_league_id": 135,
+      "api_football_id": null,
+      "coefficient": 19.989,
+      "elo_seed": 1552.0,
+      "elo": 1552.0,
+      "transfermarkt_slug": "como-1907",
+      "pot": 4,
+      "aliases": [
+        "Como 1907"
+      ],
+      "squad_value_eur": 160000000
+    },
+    "LEN": {
+      "id": "LEN",
+      "name": "Lens",
+      "country": "FRA",
+      "domestic_league_id": 61,
+      "api_football_id": 116,
+      "coefficient": 16.699,
+      "elo_seed": 1540.1,
+      "elo": 1540.1,
+      "transfermarkt_slug": "rc-lens",
+      "pot": 4,
+      "aliases": [
+        "RC Lens"
+      ],
+      "squad_value_eur": 155000000
+    },
+    "VIK": {
+      "id": "VIK",
+      "name": "Viking",
+      "country": "NOR",
+      "domestic_league_id": 103,
+      "api_football_id": null,
+      "coefficient": 8.247,
+      "elo_seed": 1509.7,
+      "elo": 1509.7,
+      "transfermarkt_slug": "viking-fk",
+      "pot": 4,
+      "aliases": [
+        "Viking FK"
+      ],
+      "squad_value_eur": 22000000
+    },
+    "SAB": {
+      "id": "SAB",
+      "name": "Sabah",
+      "country": "AZE",
+      "domestic_league_id": 419,
+      "api_football_id": null,
+      "coefficient": 6.0,
+      "elo_seed": 1501.6,
+      "elo": 1501.6,
+      "transfermarkt_slug": "sabah-fk",
+      "pot": 4,
+      "aliases": [
+        "Sabah FK"
+      ],
+      "squad_value_eur": 15000000
+    }
+  }
+}

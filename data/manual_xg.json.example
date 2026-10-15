@@ -1,0 +1,6 @@
+{
+  "_meta": "Season xG totals. Overrides the goals fallback for any club you include.",
+  "xg": {
+    "ARS": {"xg": 4.2, "xga": 1.1, "mp": 2}
+  }
+}

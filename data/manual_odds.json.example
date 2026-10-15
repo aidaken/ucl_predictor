@@ -1,0 +1,12 @@
+{
+  "_meta": "Decimal outright prices, or implied probabilities if the number is <= 1. Partial lists are fine.",
+  "odds": {
+    "RMA": 6.5,
+    "MCI": 7.0,
+    "ARS": 8.0,
+    "BAY": 9.0,
+    "BAR": 10.0,
+    "PSG": 11.0,
+    "LIV": 13.0
+  }
+}

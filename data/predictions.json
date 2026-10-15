@@ -1,0 +1,2130 @@
+{
+  "_meta": {
+    "model_version": "1.0.0",
+    "generated_at": "2026-10-15T21:06:56+00:00",
+    "simulations": 4000,
+    "weights": {
+      "elo": 0.35,
+      "xg_form": 0.3,
+      "squad_value": 0.15,
+      "betting_odds": 0.2
+    },
+    "home_advantage": 1.28,
+    "base_xg": 1.4,
+    "competition": "UEFA Champions League 2026/27",
+    "data_sources": {
+      "fixtures": "uefa league phase through 14 Oct 2026, plus API-Football when --live",
+      "elo": "UEFA coefficient prior (1480 + 3.6 * coefficient), replayed through played UCL matches",
+      "health": "API-Football domestic league + UCL, 36 clubs only"
+    }
+  },
+  "table": [
+    {
+      "club_id": "PSG",
+      "rank": 1,
+      "points": 6,
+      "gf": 10,
+      "ga": 3,
+      "gd": 7,
+      "away_gf": 4,
+      "wins": 2,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 0,
+      "name": "Paris Saint-Germain",
+      "top8_probability": 0.709,
+      "playoff_probability": 0.279,
+      "eliminated_probability": 0.012,
+      "win_probability": 0.1022
+    },
+    {
+      "club_id": "BAR",
+      "rank": 2,
+      "points": 6,
+      "gf": 9,
+      "ga": 2,
+      "gd": 7,
+      "away_gf": 4,
+      "wins": 2,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 0,
+      "name": "Barcelona",
+      "top8_probability": 0.6745,
+      "playoff_probability": 0.3135,
+      "eliminated_probability": 0.012,
+      "win_probability": 0.0853
+    },
+    {
+      "club_id": "AVL",
+      "rank": 3,
+      "points": 6,
+      "gf": 9,
+      "ga": 2,
+      "gd": 7,
+      "away_gf": 3,
+      "wins": 2,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 0,
+      "name": "Aston Villa",
+      "top8_probability": 0.5487,
+      "playoff_probability": 0.4245,
+      "eliminated_probability": 0.0267,
+      "win_probability": 0.038
+    },
+    {
+      "club_id": "STU",
+      "rank": 4,
+      "points": 6,
+      "gf": 6,
+      "ga": 1,
+      "gd": 5,
+      "away_gf": 3,
+      "wins": 2,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 0,
+      "name": "VfB Stuttgart",
+      "top8_probability": 0.359,
+      "playoff_probability": 0.5697,
+      "eliminated_probability": 0.0712,
+      "win_probability": 0.0107
+    },
+    {
+      "club_id": "LIV",
+      "rank": 5,
+      "points": 6,
+      "gf": 8,
+      "ga": 4,
+      "gd": 4,
+      "away_gf": 6,
+      "wins": 2,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 0,
+      "name": "Liverpool",
+      "top8_probability": 0.7278,
+      "playoff_probability": 0.2625,
+      "eliminated_probability": 0.0097,
+      "win_probability": 0.1077
+    },
+    {
+      "club_id": "SCP",
+      "rank": 6,
+      "points": 6,
+      "gf": 5,
+      "ga": 1,
+      "gd": 4,
+      "away_gf": 2,
+      "wins": 2,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 0,
+      "name": "Sporting CP",
+      "top8_probability": 0.4323,
+      "playoff_probability": 0.5215,
+      "eliminated_probability": 0.0462,
+      "win_probability": 0.0278
+    },
+    {
+      "club_id": "ARS",
+      "rank": 7,
+      "points": 6,
+      "gf": 4,
+      "ga": 0,
+      "gd": 4,
+      "away_gf": 1,
+      "wins": 2,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 0,
+      "name": "Arsenal",
+      "top8_probability": 0.6498,
+      "playoff_probability": 0.3355,
+      "eliminated_probability": 0.0147,
+      "win_probability": 0.0945
+    },
+    {
+      "club_id": "RMA",
+      "rank": 8,
+      "points": 6,
+      "gf": 6,
+      "ga": 4,
+      "gd": 2,
+      "away_gf": 4,
+      "wins": 2,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 0,
+      "name": "Real Madrid",
+      "top8_probability": 0.7705,
+      "playoff_probability": 0.2225,
+      "eliminated_probability": 0.007,
+      "win_probability": 0.1417
+    },
+    {
+      "club_id": "BET",
+      "rank": 9,
+      "points": 6,
+      "gf": 6,
+      "ga": 4,
+      "gd": 2,
+      "away_gf": 3,
+      "wins": 2,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 0,
+      "name": "Real Betis",
+      "top8_probability": 0.3925,
+      "playoff_probability": 0.536,
+      "eliminated_probability": 0.0715,
+      "win_probability": 0.0155
+    },
+    {
+      "club_id": "BAY",
+      "rank": 10,
+      "points": 4,
+      "gf": 8,
+      "ga": 3,
+      "gd": 5,
+      "away_gf": 3,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 1,
+      "losses": 0,
+      "name": "Bayern Munich",
+      "top8_probability": 0.4602,
+      "playoff_probability": 0.4893,
+      "eliminated_probability": 0.0505,
+      "win_probability": 0.0925
+    },
+    {
+      "club_id": "SHK",
+      "rank": 11,
+      "points": 4,
+      "gf": 4,
+      "ga": 2,
+      "gd": 2,
+      "away_gf": 1,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 1,
+      "losses": 0,
+      "name": "Shakhtar Donetsk",
+      "top8_probability": 0.1715,
+      "playoff_probability": 0.6252,
+      "eliminated_probability": 0.2032,
+      "win_probability": 0.0107
+    },
+    {
+      "club_id": "COM",
+      "rank": 12,
+      "points": 3,
+      "gf": 6,
+      "ga": 4,
+      "gd": 2,
+      "away_gf": 2,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Como",
+      "top8_probability": 0.0653,
+      "playoff_probability": 0.5363,
+      "eliminated_probability": 0.3985,
+      "win_probability": 0.004
+    },
+    {
+      "club_id": "MUN",
+      "rank": 13,
+      "points": 3,
+      "gf": 4,
+      "ga": 2,
+      "gd": 2,
+      "away_gf": 0,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Manchester United",
+      "top8_probability": 0.2,
+      "playoff_probability": 0.6192,
+      "eliminated_probability": 0.1807,
+      "win_probability": 0.0255
+    },
+    {
+      "club_id": "VIL",
+      "rank": 14,
+      "points": 3,
+      "gf": 5,
+      "ga": 4,
+      "gd": 1,
+      "away_gf": 2,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Villarreal",
+      "top8_probability": 0.119,
+      "playoff_probability": 0.5992,
+      "eliminated_probability": 0.2818,
+      "win_probability": 0.0075
+    },
+    {
+      "club_id": "ATM",
+      "rank": 15,
+      "points": 3,
+      "gf": 3,
+      "ga": 2,
+      "gd": 1,
+      "away_gf": 1,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Atlético Madrid",
+      "top8_probability": 0.2732,
+      "playoff_probability": 0.6042,
+      "eliminated_probability": 0.1225,
+      "win_probability": 0.04
+    },
+    {
+      "club_id": "BRU",
+      "rank": 16,
+      "points": 3,
+      "gf": 6,
+      "ga": 6,
+      "gd": 0,
+      "away_gf": 4,
+      "wins": 1,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Club Brugge",
+      "top8_probability": 0.1742,
+      "playoff_probability": 0.6078,
+      "eliminated_probability": 0.218,
+      "win_probability": 0.018
+    },
+    {
+      "club_id": "MCI",
+      "rank": 17,
+      "points": 3,
+      "gf": 4,
+      "ga": 4,
+      "gd": 0,
+      "away_gf": 2,
+      "wins": 1,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Manchester City",
+      "top8_probability": 0.3528,
+      "playoff_probability": 0.5627,
+      "eliminated_probability": 0.0845,
+      "win_probability": 0.0808
+    },
+    {
+      "club_id": "DOR",
+      "rank": 18,
+      "points": 3,
+      "gf": 3,
+      "ga": 3,
+      "gd": 0,
+      "away_gf": 0,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Borussia Dortmund",
+      "top8_probability": 0.178,
+      "playoff_probability": 0.627,
+      "eliminated_probability": 0.195,
+      "win_probability": 0.021
+    },
+    {
+      "club_id": "LEN",
+      "rank": 19,
+      "points": 3,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1,
+      "away_gf": 3,
+      "wins": 1,
+      "away_wins": 1,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Lens",
+      "top8_probability": 0.051,
+      "playoff_probability": 0.503,
+      "eliminated_probability": 0.446,
+      "win_probability": 0.0013
+    },
+    {
+      "club_id": "AEK",
+      "rank": 20,
+      "points": 3,
+      "gf": 2,
+      "ga": 3,
+      "gd": -1,
+      "away_gf": 1,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "AEK Athens",
+      "top8_probability": 0.0415,
+      "playoff_probability": 0.4562,
+      "eliminated_probability": 0.5022,
+      "win_probability": 0.0015
+    },
+    {
+      "club_id": "RBL",
+      "rank": 21,
+      "points": 3,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2,
+      "away_gf": 1,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "RB Leipzig",
+      "top8_probability": 0.0823,
+      "playoff_probability": 0.532,
+      "eliminated_probability": 0.3857,
+      "win_probability": 0.0092
+    },
+    {
+      "club_id": "SAB",
+      "rank": 22,
+      "points": 3,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2,
+      "away_gf": 0,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Sabah",
+      "top8_probability": 0.0355,
+      "playoff_probability": 0.4285,
+      "eliminated_probability": 0.536,
+      "win_probability": 0.0003
+    },
+    {
+      "club_id": "FEY",
+      "rank": 23,
+      "points": 3,
+      "gf": 4,
+      "ga": 7,
+      "gd": -3,
+      "away_gf": 1,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Feyenoord",
+      "top8_probability": 0.1358,
+      "playoff_probability": 0.5925,
+      "eliminated_probability": 0.2717,
+      "win_probability": 0.0105
+    },
+    {
+      "club_id": "BOD",
+      "rank": 24,
+      "points": 3,
+      "gf": 1,
+      "ga": 5,
+      "gd": -4,
+      "away_gf": 0,
+      "wins": 1,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 1,
+      "name": "Bodø/Glimt",
+      "top8_probability": 0.1108,
+      "playoff_probability": 0.5817,
+      "eliminated_probability": 0.3075,
+      "win_probability": 0.006
+    },
+    {
+      "club_id": "ROM",
+      "rank": 25,
+      "points": 1,
+      "gf": 4,
+      "ga": 5,
+      "gd": -1,
+      "away_gf": 1,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 1,
+      "losses": 1,
+      "name": "Roma",
+      "top8_probability": 0.0585,
+      "playoff_probability": 0.5165,
+      "eliminated_probability": 0.425,
+      "win_probability": 0.0107
+    },
+    {
+      "club_id": "PSV",
+      "rank": 26,
+      "points": 1,
+      "gf": 1,
+      "ga": 2,
+      "gd": -1,
+      "away_gf": 0,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 1,
+      "losses": 1,
+      "name": "PSV Eindhoven",
+      "top8_probability": 0.0307,
+      "playoff_probability": 0.418,
+      "eliminated_probability": 0.5513,
+      "win_probability": 0.005
+    },
+    {
+      "club_id": "VIK",
+      "rank": 27,
+      "points": 1,
+      "gf": 4,
+      "ga": 6,
+      "gd": -2,
+      "away_gf": 1,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 1,
+      "losses": 1,
+      "name": "Viking",
+      "top8_probability": 0.0203,
+      "playoff_probability": 0.3573,
+      "eliminated_probability": 0.6225,
+      "win_probability": 0.001
+    },
+    {
+      "club_id": "FEN",
+      "rank": 28,
+      "points": 1,
+      "gf": 1,
+      "ga": 7,
+      "gd": -6,
+      "away_gf": 0,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 1,
+      "losses": 1,
+      "name": "Fenerbahçe",
+      "top8_probability": 0.0253,
+      "playoff_probability": 0.3623,
+      "eliminated_probability": 0.6125,
+      "win_probability": 0.0022
+    },
+    {
+      "club_id": "INT",
+      "rank": 29,
+      "points": 0,
+      "gf": 4,
+      "ga": 6,
+      "gd": -2,
+      "away_gf": 1,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 2,
+      "name": "Inter",
+      "top8_probability": 0.05,
+      "playoff_probability": 0.4883,
+      "eliminated_probability": 0.4617,
+      "win_probability": 0.017
+    },
+    {
+      "club_id": "POR",
+      "rank": 30,
+      "points": 0,
+      "gf": 2,
+      "ga": 5,
+      "gd": -3,
+      "away_gf": 2,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 2,
+      "name": "Porto",
+      "top8_probability": 0.0262,
+      "playoff_probability": 0.404,
+      "eliminated_probability": 0.5697,
+      "win_probability": 0.0035
+    },
+    {
+      "club_id": "SLP",
+      "rank": 31,
+      "points": 0,
+      "gf": 2,
+      "ga": 5,
+      "gd": -3,
+      "away_gf": 0,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 2,
+      "name": "Slavia Prague",
+      "top8_probability": 0.0055,
+      "playoff_probability": 0.178,
+      "eliminated_probability": 0.8165,
+      "win_probability": 0.0005
+    },
+    {
+      "club_id": "NAP",
+      "rank": 32,
+      "points": 0,
+      "gf": 1,
+      "ga": 4,
+      "gd": -3,
+      "away_gf": 1,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 2,
+      "name": "Napoli",
+      "top8_probability": 0.028,
+      "playoff_probability": 0.3745,
+      "eliminated_probability": 0.5975,
+      "win_probability": 0.0022
+    },
+    {
+      "club_id": "LAS",
+      "rank": 33,
+      "points": 0,
+      "gf": 3,
+      "ga": 7,
+      "gd": -4,
+      "away_gf": 0,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 2,
+      "name": "LASK",
+      "top8_probability": 0.0055,
+      "playoff_probability": 0.206,
+      "eliminated_probability": 0.7885,
+      "win_probability": 0.0003
+    },
+    {
+      "club_id": "LIL",
+      "rank": 34,
+      "points": 0,
+      "gf": 2,
+      "ga": 6,
+      "gd": -4,
+      "away_gf": 0,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 2,
+      "name": "Lille",
+      "top8_probability": 0.014,
+      "playoff_probability": 0.341,
+      "eliminated_probability": 0.645,
+      "win_probability": 0.0027
+    },
+    {
+      "club_id": "GAL",
+      "rank": 35,
+      "points": 0,
+      "gf": 2,
+      "ga": 7,
+      "gd": -5,
+      "away_gf": 1,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 2,
+      "name": "Galatasaray",
+      "top8_probability": 0.0115,
+      "playoff_probability": 0.3045,
+      "eliminated_probability": 0.684,
+      "win_probability": 0.002
+    },
+    {
+      "club_id": "SLO",
+      "rank": 36,
+      "points": 0,
+      "gf": 1,
+      "ga": 9,
+      "gd": -8,
+      "away_gf": 1,
+      "wins": 0,
+      "away_wins": 0,
+      "played": 2,
+      "draws": 0,
+      "losses": 2,
+      "name": "Slovan Bratislava",
+      "top8_probability": 0.0095,
+      "playoff_probability": 0.22,
+      "eliminated_probability": 0.7705,
+      "win_probability": 0.0005
+    }
+  ],
+  "clubs": [
+    {
+      "id": "PSG",
+      "name": "Paris Saint-Germain",
+      "country": "FRA",
+      "elo": 1979.0,
+      "strength": 0.7099,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1979.0,
+        "elo_normalized": 0.9077,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.856,
+        "squad_value_eur": 840000000,
+        "squad_value_normalized": 0.668,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.1022,
+        "top8_probability": 0.709,
+        "playoff_probability": 0.279,
+        "eliminated_probability": 0.012,
+        "reach_r16_probability": 0.8988,
+        "reach_qf_probability": 0.566,
+        "reach_sf_probability": 0.3382,
+        "reach_final_probability": 0.1938,
+        "mean_rank": 6.71
+      }
+    },
+    {
+      "id": "BAR",
+      "name": "Barcelona",
+      "country": "ESP",
+      "elo": 1907.5,
+      "strength": 0.6704,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1907.5,
+        "elo_normalized": 0.7688,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.862,
+        "squad_value_eur": 980000000,
+        "squad_value_normalized": 0.7814,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0853,
+        "top8_probability": 0.6745,
+        "playoff_probability": 0.3135,
+        "eliminated_probability": 0.012,
+        "reach_r16_probability": 0.8785,
+        "reach_qf_probability": 0.5393,
+        "reach_sf_probability": 0.3118,
+        "reach_final_probability": 0.1695,
+        "mean_rank": 7.19
+      }
+    },
+    {
+      "id": "AVL",
+      "name": "Aston Villa",
+      "country": "ENG",
+      "elo": 1811.5,
+      "strength": 0.4992,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1811.5,
+        "elo_normalized": 0.5824,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.898,
+        "squad_value_eur": 390000000,
+        "squad_value_normalized": 0.3036,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.038,
+        "top8_probability": 0.5487,
+        "playoff_probability": 0.4245,
+        "eliminated_probability": 0.0267,
+        "reach_r16_probability": 0.7857,
+        "reach_qf_probability": 0.3987,
+        "reach_sf_probability": 0.19,
+        "reach_final_probability": 0.087,
+        "mean_rank": 9.02
+      }
+    },
+    {
+      "id": "STU",
+      "name": "VfB Stuttgart",
+      "country": "GER",
+      "elo": 1615.7,
+      "strength": 0.3237,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1615.7,
+        "elo_normalized": 0.202,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.832,
+        "squad_value_eur": 330000000,
+        "squad_value_normalized": 0.2551,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0107,
+        "top8_probability": 0.359,
+        "playoff_probability": 0.5697,
+        "eliminated_probability": 0.0712,
+        "reach_r16_probability": 0.618,
+        "reach_qf_probability": 0.23,
+        "reach_sf_probability": 0.0775,
+        "reach_final_probability": 0.0275,
+        "mean_rank": 12.42
+      }
+    },
+    {
+      "id": "LIV",
+      "name": "Liverpool",
+      "country": "ENG",
+      "elo": 1966.1,
+      "strength": 0.702,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1966.1,
+        "elo_normalized": 0.8827,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.941,
+        "squad_value_eur": 860000000,
+        "squad_value_normalized": 0.6842,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.1077,
+        "top8_probability": 0.7278,
+        "playoff_probability": 0.2625,
+        "eliminated_probability": 0.0097,
+        "reach_r16_probability": 0.9117,
+        "reach_qf_probability": 0.583,
+        "reach_sf_probability": 0.3548,
+        "reach_final_probability": 0.1973,
+        "mean_rank": 6.53
+      }
+    },
+    {
+      "id": "SCP",
+      "name": "Sporting CP",
+      "country": "POR",
+      "elo": 1804.7,
+      "strength": 0.4798,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1804.7,
+        "elo_normalized": 0.5692,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.889,
+        "squad_value_eur": 300000000,
+        "squad_value_normalized": 0.2308,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0278,
+        "top8_probability": 0.4323,
+        "playoff_probability": 0.5215,
+        "eliminated_probability": 0.0462,
+        "reach_r16_probability": 0.7097,
+        "reach_qf_probability": 0.3295,
+        "reach_sf_probability": 0.1457,
+        "reach_final_probability": 0.0673,
+        "mean_rank": 11.02
+      }
+    },
+    {
+      "id": "ARS",
+      "name": "Arsenal",
+      "country": "ENG",
+      "elo": 1927.1,
+      "strength": 0.6977,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1927.1,
+        "elo_normalized": 0.8069,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.869,
+        "squad_value_eur": 1050000000,
+        "squad_value_normalized": 0.8381,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0945,
+        "top8_probability": 0.6498,
+        "playoff_probability": 0.3355,
+        "eliminated_probability": 0.0147,
+        "reach_r16_probability": 0.8645,
+        "reach_qf_probability": 0.5333,
+        "reach_sf_probability": 0.3008,
+        "reach_final_probability": 0.1683,
+        "mean_rank": 7.64
+      }
+    },
+    {
+      "id": "RMA",
+      "name": "Real Madrid",
+      "country": "ESP",
+      "elo": 2026.5,
+      "strength": 0.8125,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 2026.5,
+        "elo_normalized": 1.0,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.946,
+        "squad_value_eur": 1250000000,
+        "squad_value_normalized": 1.0,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.1417,
+        "top8_probability": 0.7705,
+        "playoff_probability": 0.2225,
+        "eliminated_probability": 0.007,
+        "reach_r16_probability": 0.9247,
+        "reach_qf_probability": 0.6285,
+        "reach_sf_probability": 0.4015,
+        "reach_final_probability": 0.25,
+        "mean_rank": 5.77
+      }
+    },
+    {
+      "id": "BET",
+      "name": "Real Betis",
+      "country": "ESP",
+      "elo": 1786.6,
+      "strength": 0.4462,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1786.6,
+        "elo_normalized": 0.534,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.872,
+        "squad_value_eur": 180000000,
+        "squad_value_normalized": 0.1336,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0155,
+        "top8_probability": 0.3925,
+        "playoff_probability": 0.536,
+        "eliminated_probability": 0.0715,
+        "reach_r16_probability": 0.666,
+        "reach_qf_probability": 0.3065,
+        "reach_sf_probability": 0.1195,
+        "reach_final_probability": 0.0413,
+        "mean_rank": 11.9
+      }
+    },
+    {
+      "id": "BAY",
+      "name": "Bayern Munich",
+      "country": "GER",
+      "elo": 1998.9,
+      "strength": 0.7389,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1998.9,
+        "elo_normalized": 0.9464,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.886,
+        "squad_value_eur": 920000000,
+        "squad_value_normalized": 0.7328,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0925,
+        "top8_probability": 0.4602,
+        "playoff_probability": 0.4893,
+        "eliminated_probability": 0.0505,
+        "reach_r16_probability": 0.7967,
+        "reach_qf_probability": 0.5072,
+        "reach_sf_probability": 0.3038,
+        "reach_final_probability": 0.1708,
+        "mean_rank": 10.61
+      }
+    },
+    {
+      "id": "SHK",
+      "name": "Shakhtar Donetsk",
+      "country": "UKR",
+      "elo": 1700.0,
+      "strength": 0.3619,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1700.0,
+        "elo_normalized": 0.3658,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.969,
+        "squad_value_eur": 110000000,
+        "squad_value_normalized": 0.0769,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0107,
+        "top8_probability": 0.1715,
+        "playoff_probability": 0.6252,
+        "eliminated_probability": 0.2032,
+        "reach_r16_probability": 0.4703,
+        "reach_qf_probability": 0.184,
+        "reach_sf_probability": 0.0712,
+        "reach_final_probability": 0.0238,
+        "mean_rank": 16.92
+      }
+    },
+    {
+      "id": "COM",
+      "name": "Como",
+      "country": "ITA",
+      "elo": 1567.8,
+      "strength": 0.2572,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1567.8,
+        "elo_normalized": 0.109,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.903,
+        "squad_value_eur": 160000000,
+        "squad_value_normalized": 0.1174,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.004,
+        "top8_probability": 0.0653,
+        "playoff_probability": 0.5363,
+        "eliminated_probability": 0.3985,
+        "reach_r16_probability": 0.272,
+        "reach_qf_probability": 0.0892,
+        "reach_sf_probability": 0.0305,
+        "reach_final_probability": 0.0107,
+        "mean_rank": 21.51
+      }
+    },
+    {
+      "id": "MUN",
+      "name": "Manchester United",
+      "country": "ENG",
+      "elo": 1747.4,
+      "strength": 0.4979,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1747.4,
+        "elo_normalized": 0.4578,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.98,
+        "squad_value_eur": 740000000,
+        "squad_value_normalized": 0.587,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0255,
+        "top8_probability": 0.2,
+        "playoff_probability": 0.6192,
+        "eliminated_probability": 0.1807,
+        "reach_r16_probability": 0.5517,
+        "reach_qf_probability": 0.258,
+        "reach_sf_probability": 0.118,
+        "reach_final_probability": 0.055,
+        "mean_rank": 16.18
+      }
+    },
+    {
+      "id": "VIL",
+      "name": "Villarreal",
+      "country": "ESP",
+      "elo": 1701.5,
+      "strength": 0.383,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1701.5,
+        "elo_normalized": 0.3687,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.948,
+        "squad_value_eur": 240000000,
+        "squad_value_normalized": 0.1822,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0075,
+        "top8_probability": 0.119,
+        "playoff_probability": 0.5992,
+        "eliminated_probability": 0.2818,
+        "reach_r16_probability": 0.3842,
+        "reach_qf_probability": 0.1487,
+        "reach_sf_probability": 0.0512,
+        "reach_final_probability": 0.0205,
+        "mean_rank": 19.01
+      }
+    },
+    {
+      "id": "ATM",
+      "name": "Atlético Madrid",
+      "country": "ESP",
+      "elo": 1857.7,
+      "strength": 0.5643,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1857.7,
+        "elo_normalized": 0.6721,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.124,
+        "squad_value_eur": 560000000,
+        "squad_value_normalized": 0.4413,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.04,
+        "top8_probability": 0.2732,
+        "playoff_probability": 0.6042,
+        "eliminated_probability": 0.1225,
+        "reach_r16_probability": 0.6342,
+        "reach_qf_probability": 0.3445,
+        "reach_sf_probability": 0.1735,
+        "reach_final_probability": 0.0862,
+        "mean_rank": 14.33
+      }
+    },
+    {
+      "id": "BRU",
+      "name": "Club Brugge",
+      "country": "BEL",
+      "elo": 1762.4,
+      "strength": 0.4302,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1762.4,
+        "elo_normalized": 0.487,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.097,
+        "squad_value_eur": 210000000,
+        "squad_value_normalized": 0.1579,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.018,
+        "top8_probability": 0.1742,
+        "playoff_probability": 0.6078,
+        "eliminated_probability": 0.218,
+        "reach_r16_probability": 0.484,
+        "reach_qf_probability": 0.217,
+        "reach_sf_probability": 0.091,
+        "reach_final_probability": 0.037,
+        "mean_rank": 17.17
+      }
+    },
+    {
+      "id": "MCI",
+      "name": "Manchester City",
+      "country": "ENG",
+      "elo": 1924.1,
+      "strength": 0.7148,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1924.1,
+        "elo_normalized": 0.8011,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.083,
+        "squad_value_eur": 1180000000,
+        "squad_value_normalized": 0.9433,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0808,
+        "top8_probability": 0.3528,
+        "playoff_probability": 0.5627,
+        "eliminated_probability": 0.0845,
+        "reach_r16_probability": 0.7302,
+        "reach_qf_probability": 0.4417,
+        "reach_sf_probability": 0.2612,
+        "reach_final_probability": 0.1497,
+        "mean_rank": 12.63
+      }
+    },
+    {
+      "id": "DOR",
+      "name": "Borussia Dortmund",
+      "country": "GER",
+      "elo": 1826.5,
+      "strength": 0.5256,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1826.5,
+        "elo_normalized": 0.6115,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.941,
+        "squad_value_eur": 480000000,
+        "squad_value_normalized": 0.3765,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.021,
+        "top8_probability": 0.178,
+        "playoff_probability": 0.627,
+        "eliminated_probability": 0.195,
+        "reach_r16_probability": 0.5225,
+        "reach_qf_probability": 0.2432,
+        "reach_sf_probability": 0.11,
+        "reach_final_probability": 0.0473,
+        "mean_rank": 16.77
+      }
+    },
+    {
+      "id": "LEN",
+      "name": "Lens",
+      "country": "FRA",
+      "elo": 1557.2,
+      "strength": 0.2474,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1557.2,
+        "elo_normalized": 0.0884,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.024,
+        "squad_value_eur": 155000000,
+        "squad_value_normalized": 0.1134,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0013,
+        "top8_probability": 0.051,
+        "playoff_probability": 0.503,
+        "eliminated_probability": 0.446,
+        "reach_r16_probability": 0.2442,
+        "reach_qf_probability": 0.0745,
+        "reach_sf_probability": 0.0243,
+        "reach_final_probability": 0.0075,
+        "mean_rank": 22.43
+      }
+    },
+    {
+      "id": "AEK",
+      "name": "AEK Athens",
+      "country": "GRE",
+      "elo": 1571.4,
+      "strength": 0.2432,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1571.4,
+        "elo_normalized": 0.116,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.964,
+        "squad_value_eur": 48000000,
+        "squad_value_normalized": 0.0267,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0015,
+        "top8_probability": 0.0415,
+        "playoff_probability": 0.4562,
+        "eliminated_probability": 0.5022,
+        "reach_r16_probability": 0.21,
+        "reach_qf_probability": 0.0622,
+        "reach_sf_probability": 0.0208,
+        "reach_final_probability": 0.006,
+        "mean_rank": 23.55
+      }
+    },
+    {
+      "id": "RBL",
+      "name": "RB Leipzig",
+      "country": "GER",
+      "elo": 1695.1,
+      "strength": 0.3957,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1695.1,
+        "elo_normalized": 0.3563,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.027,
+        "squad_value_eur": 360000000,
+        "squad_value_normalized": 0.2794,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0092,
+        "top8_probability": 0.0823,
+        "playoff_probability": 0.532,
+        "eliminated_probability": 0.3857,
+        "reach_r16_probability": 0.321,
+        "reach_qf_probability": 0.1225,
+        "reach_sf_probability": 0.0508,
+        "reach_final_probability": 0.0213,
+        "mean_rank": 21.06
+      }
+    },
+    {
+      "id": "SAB",
+      "name": "Sabah",
+      "country": "AZE",
+      "elo": 1520.7,
+      "strength": 0.1951,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1520.7,
+        "elo_normalized": 0.0175,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.984,
+        "squad_value_eur": 15000000,
+        "squad_value_normalized": 0.0,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0003,
+        "top8_probability": 0.0355,
+        "playoff_probability": 0.4285,
+        "eliminated_probability": 0.536,
+        "reach_r16_probability": 0.1737,
+        "reach_qf_probability": 0.0465,
+        "reach_sf_probability": 0.0107,
+        "reach_final_probability": 0.0025,
+        "mean_rank": 24.27
+      }
+    },
+    {
+      "id": "FEY",
+      "name": "Feyenoord",
+      "country": "NED",
+      "elo": 1736.0,
+      "strength": 0.4024,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1736.0,
+        "elo_normalized": 0.4357,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.184,
+        "squad_value_eur": 175000000,
+        "squad_value_normalized": 0.1296,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0105,
+        "top8_probability": 0.1358,
+        "playoff_probability": 0.5925,
+        "eliminated_probability": 0.2717,
+        "reach_r16_probability": 0.4198,
+        "reach_qf_probability": 0.179,
+        "reach_sf_probability": 0.0732,
+        "reach_final_probability": 0.0255,
+        "mean_rank": 18.54
+      }
+    },
+    {
+      "id": "BOD",
+      "name": "Bodø/Glimt",
+      "country": "NOR",
+      "elo": 1732.5,
+      "strength": 0.3812,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1732.5,
+        "elo_normalized": 0.4289,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.104,
+        "squad_value_eur": 55000000,
+        "squad_value_normalized": 0.0324,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.006,
+        "top8_probability": 0.1108,
+        "playoff_probability": 0.5817,
+        "eliminated_probability": 0.3075,
+        "reach_r16_probability": 0.3745,
+        "reach_qf_probability": 0.1447,
+        "reach_sf_probability": 0.0522,
+        "reach_final_probability": 0.0163,
+        "mean_rank": 19.56
+      }
+    },
+    {
+      "id": "ROM",
+      "name": "Roma",
+      "country": "ITA",
+      "elo": 1814.2,
+      "strength": 0.503,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1814.2,
+        "elo_normalized": 0.5876,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.929,
+        "squad_value_eur": 400000000,
+        "squad_value_normalized": 0.3117,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0107,
+        "top8_probability": 0.0585,
+        "playoff_probability": 0.5165,
+        "eliminated_probability": 0.425,
+        "reach_r16_probability": 0.3277,
+        "reach_qf_probability": 0.136,
+        "reach_sf_probability": 0.0573,
+        "reach_final_probability": 0.025,
+        "mean_rank": 22.13
+      }
+    },
+    {
+      "id": "PSV",
+      "name": "PSV Eindhoven",
+      "country": "NED",
+      "elo": 1709.9,
+      "strength": 0.3886,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1709.9,
+        "elo_normalized": 0.385,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.001,
+        "squad_value_eur": 230000000,
+        "squad_value_normalized": 0.1741,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.005,
+        "top8_probability": 0.0307,
+        "playoff_probability": 0.418,
+        "eliminated_probability": 0.5513,
+        "reach_r16_probability": 0.211,
+        "reach_qf_probability": 0.082,
+        "reach_sf_probability": 0.03,
+        "reach_final_probability": 0.0123,
+        "mean_rank": 24.48
+      }
+    },
+    {
+      "id": "VIK",
+      "name": "Viking",
+      "country": "NOR",
+      "elo": 1511.7,
+      "strength": 0.1886,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1511.7,
+        "elo_normalized": 0.0,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.208,
+        "squad_value_eur": 22000000,
+        "squad_value_normalized": 0.0057,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.001,
+        "top8_probability": 0.0203,
+        "playoff_probability": 0.3573,
+        "eliminated_probability": 0.6225,
+        "reach_r16_probability": 0.1475,
+        "reach_qf_probability": 0.0465,
+        "reach_sf_probability": 0.013,
+        "reach_final_probability": 0.0018,
+        "mean_rank": 25.93
+      }
+    },
+    {
+      "id": "FEN",
+      "name": "Fenerbahçe",
+      "country": "TUR",
+      "elo": 1681.4,
+      "strength": 0.3583,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1681.4,
+        "elo_normalized": 0.3296,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.118,
+        "squad_value_eur": 190000000,
+        "squad_value_normalized": 0.1417,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0022,
+        "top8_probability": 0.0253,
+        "playoff_probability": 0.3623,
+        "eliminated_probability": 0.6125,
+        "reach_r16_probability": 0.171,
+        "reach_qf_probability": 0.0545,
+        "reach_sf_probability": 0.017,
+        "reach_final_probability": 0.0043,
+        "mean_rank": 25.72
+      }
+    },
+    {
+      "id": "INT",
+      "name": "Inter",
+      "country": "ITA",
+      "elo": 1890.9,
+      "strength": 0.6016,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1890.9,
+        "elo_normalized": 0.7366,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.042,
+        "squad_value_eur": 620000000,
+        "squad_value_normalized": 0.4899,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.017,
+        "top8_probability": 0.05,
+        "playoff_probability": 0.4883,
+        "eliminated_probability": 0.4617,
+        "reach_r16_probability": 0.3312,
+        "reach_qf_probability": 0.1568,
+        "reach_sf_probability": 0.079,
+        "reach_final_probability": 0.039,
+        "mean_rank": 22.78
+      }
+    },
+    {
+      "id": "POR",
+      "name": "Porto",
+      "country": "POR",
+      "elo": 1739.8,
+      "strength": 0.4261,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1739.8,
+        "elo_normalized": 0.4431,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.037,
+        "squad_value_eur": 310000000,
+        "squad_value_normalized": 0.2389,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0035,
+        "top8_probability": 0.0262,
+        "playoff_probability": 0.404,
+        "eliminated_probability": 0.5697,
+        "reach_r16_probability": 0.2182,
+        "reach_qf_probability": 0.0915,
+        "reach_sf_probability": 0.0357,
+        "reach_final_probability": 0.012,
+        "mean_rank": 25.06
+      }
+    },
+    {
+      "id": "SLP",
+      "name": "Slavia Prague",
+      "country": "CZE",
+      "elo": 1586.3,
+      "strength": 0.2592,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1586.3,
+        "elo_normalized": 0.1449,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 0.943,
+        "squad_value_eur": 70000000,
+        "squad_value_normalized": 0.0445,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0005,
+        "top8_probability": 0.0055,
+        "playoff_probability": 0.178,
+        "eliminated_probability": 0.8165,
+        "reach_r16_probability": 0.0707,
+        "reach_qf_probability": 0.0222,
+        "reach_sf_probability": 0.006,
+        "reach_final_probability": 0.0013,
+        "mean_rank": 29.81
+      }
+    },
+    {
+      "id": "NAP",
+      "name": "Napoli",
+      "country": "ITA",
+      "elo": 1676.3,
+      "strength": 0.3904,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1676.3,
+        "elo_normalized": 0.3197,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.109,
+        "squad_value_eur": 430000000,
+        "squad_value_normalized": 0.336,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0022,
+        "top8_probability": 0.028,
+        "playoff_probability": 0.3745,
+        "eliminated_probability": 0.5975,
+        "reach_r16_probability": 0.2025,
+        "reach_qf_probability": 0.0722,
+        "reach_sf_probability": 0.0265,
+        "reach_final_probability": 0.007,
+        "mean_rank": 25.38
+      }
+    },
+    {
+      "id": "LAS",
+      "name": "LASK",
+      "country": "AUT",
+      "elo": 1533.0,
+      "strength": 0.2076,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1533.0,
+        "elo_normalized": 0.0414,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.058,
+        "squad_value_eur": 28000000,
+        "squad_value_normalized": 0.0105,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0003,
+        "top8_probability": 0.0055,
+        "playoff_probability": 0.206,
+        "eliminated_probability": 0.7885,
+        "reach_r16_probability": 0.0693,
+        "reach_qf_probability": 0.0182,
+        "reach_sf_probability": 0.0043,
+        "reach_final_probability": 0.0008,
+        "mean_rank": 29.27
+      }
+    },
+    {
+      "id": "LIL",
+      "name": "Lille",
+      "country": "FRA",
+      "elo": 1699.5,
+      "strength": 0.3729,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1699.5,
+        "elo_normalized": 0.3648,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.129,
+        "squad_value_eur": 185000000,
+        "squad_value_normalized": 0.1377,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0027,
+        "top8_probability": 0.014,
+        "playoff_probability": 0.341,
+        "eliminated_probability": 0.645,
+        "reach_r16_probability": 0.1708,
+        "reach_qf_probability": 0.0665,
+        "reach_sf_probability": 0.0238,
+        "reach_final_probability": 0.0065,
+        "mean_rank": 26.49
+      }
+    },
+    {
+      "id": "GAL",
+      "name": "Galatasaray",
+      "country": "TUR",
+      "elo": 1650.7,
+      "strength": 0.3337,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1650.7,
+        "elo_normalized": 0.27,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.243,
+        "squad_value_eur": 200000000,
+        "squad_value_normalized": 0.1498,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.002,
+        "top8_probability": 0.0115,
+        "playoff_probability": 0.3045,
+        "eliminated_probability": 0.684,
+        "reach_r16_probability": 0.1435,
+        "reach_qf_probability": 0.052,
+        "reach_sf_probability": 0.018,
+        "reach_final_probability": 0.0057,
+        "mean_rank": 27.3
+      }
+    },
+    {
+      "id": "SLO",
+      "name": "Slovan Bratislava",
+      "country": "SVK",
+      "elo": 1584.2,
+      "strength": 0.2517,
+      "injury_multiplier": 1.0,
+      "signals": {
+        "elo": 1584.2,
+        "elo_normalized": 0.1408,
+        "xg_form_ratio": 0.5,
+        "form_source": "goals_adj",
+        "sos_multiplier": 1.252,
+        "squad_value_eur": 32000000,
+        "squad_value_normalized": 0.0138,
+        "betting_implied_prob": null,
+        "injury_multiplier": 1.0,
+        "effective_weights": {
+          "elo": 0.4375,
+          "xg_form": 0.375,
+          "squad_value": 0.1875
+        }
+      },
+      "probabilities": {
+        "win_probability": 0.0005,
+        "top8_probability": 0.0095,
+        "playoff_probability": 0.22,
+        "eliminated_probability": 0.7705,
+        "reach_r16_probability": 0.0895,
+        "reach_qf_probability": 0.0235,
+        "reach_sf_probability": 0.0073,
+        "reach_final_probability": 0.0027,
+        "mean_rank": 28.89
+      }
+    }
+  ],
+  "bracket": {
+    "playoff": [
+      {
+        "leg1_home": "BOD",
+        "leg2_home": "BET",
+        "advance": {
+          "BET": 0.5525,
+          "BOD": 0.4475
+        }
+      },
+      {
+        "leg1_home": "FEY",
+        "leg2_home": "BAY",
+        "advance": {
+          "BAY": 0.7035,
+          "FEY": 0.2965
+        }
+      },
+      {
+        "leg1_home": "SAB",
+        "leg2_home": "SHK",
+        "advance": {
+          "SHK": 0.636,
+          "SAB": 0.364
+        }
+      },
+      {
+        "leg1_home": "RBL",
+        "leg2_home": "COM",
+        "advance": {
+          "COM": 0.426,
+          "RBL": 0.574
+        }
+      },
+      {
+        "leg1_home": "AEK",
+        "leg2_home": "MUN",
+        "advance": {
+          "MUN": 0.6895,
+          "AEK": 0.3105
+        }
+      },
+      {
+        "leg1_home": "LEN",
+        "leg2_home": "VIL",
+        "advance": {
+          "VIL": 0.5765,
+          "LEN": 0.4235
+        }
+      },
+      {
+        "leg1_home": "DOR",
+        "leg2_home": "ATM",
+        "advance": {
+          "ATM": 0.5565,
+          "DOR": 0.4435
+        }
+      },
+      {
+        "leg1_home": "MCI",
+        "leg2_home": "BRU",
+        "advance": {
+          "BRU": 0.353,
+          "MCI": 0.647
+        }
+      }
+    ],
+    "round_of_16": [
+      {
+        "seed": "PSG",
+        "advance": {
+          "PSG": 0.5575,
+          "BRU": 0.1265,
+          "MCI": 0.316
+        }
+      },
+      {
+        "seed": "RMA",
+        "advance": {
+          "RMA": 0.736,
+          "BET": 0.1555,
+          "BOD": 0.1085
+        }
+      },
+      {
+        "seed": "STU",
+        "advance": {
+          "STU": 0.454,
+          "AEK": 0.1255,
+          "MUN": 0.4205
+        }
+      },
+      {
+        "seed": "LIV",
+        "advance": {
+          "LIV": 0.7375,
+          "RBL": 0.164,
+          "COM": 0.0985
+        }
+      },
+      {
+        "seed": "BAR",
+        "advance": {
+          "BAR": 0.5835,
+          "ATM": 0.2555,
+          "DOR": 0.161
+        }
+      },
+      {
+        "seed": "ARS",
+        "advance": {
+          "ARS": 0.545,
+          "BAY": 0.3535,
+          "FEY": 0.1015
+        }
+      },
+      {
+        "seed": "AVL",
+        "advance": {
+          "AVL": 0.6395,
+          "LEN": 0.1245,
+          "VIL": 0.236
+        }
+      },
+      {
+        "seed": "SCP",
+        "advance": {
+          "SCP": 0.6015,
+          "SHK": 0.279,
+          "SAB": 0.1195
+        }
+      }
+    ],
+    "frozen_champion": {
+      "SCP": 0.05,
+      "PSG": 0.0985,
+      "BAR": 0.087,
+      "AVL": 0.0725,
+      "RMA": 0.1455,
+      "BAY": 0.064,
+      "ARS": 0.0955,
+      "ATM": 0.031,
+      "LIV": 0.152,
+      "STU": 0.022,
+      "MUN": 0.0325,
+      "FEY": 0.007,
+      "DOR": 0.013,
+      "MCI": 0.0515,
+      "LEN": 0.0045,
+      "AEK": 0.004,
+      "BET": 0.009,
+      "RBL": 0.009,
+      "COM": 0.0045,
+      "SHK": 0.0135,
+      "VIL": 0.017,
+      "BRU": 0.0085,
+      "BOD": 0.006,
+      "SAB": 0.002
+    },
+    "note": "Pairings if the league table froze on the current results. Title odds on the main table include the remaining matchdays."
+  }
+}
