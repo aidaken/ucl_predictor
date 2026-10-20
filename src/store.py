@@ -9,6 +9,27 @@ from typing import Any
 
 logger = logging.getLogger("ucl")
 
+
+def version_key(value: str | None) -> tuple[int, ...]:
+    """Split a model version into numbers so 1.10.0 sorts after 1.9.0."""
+    parts: list[int] = []
+    for piece in str(value or "0").split("."):
+        digits = ""
+        for char in piece:
+            if char.isdigit():
+                digits += char
+            else:
+                break
+        parts.append(int(digits) if digits else 0)
+    return tuple(parts)
+
+
+def is_downgrade(incoming: str | None, stored: str | None) -> bool:
+    """True when this run is an older model than one already stored."""
+    if not stored:
+        return False
+    return version_key(incoming) < version_key(stored)
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS runs (
     id BIGSERIAL PRIMARY KEY,
@@ -85,6 +106,17 @@ def upsert_run(payload: dict[str, Any], clubs: dict[str, dict[str, Any]], fixtur
         with conn.cursor() as cur:
             cur.execute(SCHEMA)
             meta = payload.get("_meta") or {}
+            incoming = str(meta.get("model_version") or "0")
+            cur.execute("SELECT model_version FROM runs")
+            stored = [row[0] for row in cur.fetchall()]
+            newest = max(stored, key=version_key) if stored else None
+            if is_downgrade(incoming, newest):
+                logger.error(
+                    "refusing Neon write: model %s is older than stored %s",
+                    incoming,
+                    newest,
+                )
+                return None
             cur.execute(
                 """
                 INSERT INTO runs (model_version, n_simulations, meta, payload)

@@ -1,0 +1,13 @@
+---
+description: Do not let an older UCL model overwrite the live prediction run
+alwaysApply: true
+---
+
+# Model runs
+
+The site shows whoever the latest stored run says. An older checkout did that with model 1.0.0 and put Real Madrid back on top after 1.1.0 had already dropped the trophy-history prior.
+
+- Club strength starts from the domestic league, plus results, form, markets, rest, and injuries. The UEFA coefficient is only the last league-table tie-break. Do not seed Elo from the coefficient or from European titles.
+- `upsert_run` must refuse a write when `MODEL_VERSION` is older than the newest version already in `runs`. A same-version rerun is fine.
+- The read API serves the highest model version, then the latest id of that version. Do not go back to `ORDER BY id DESC LIMIT 1`.
+- Do not point a scheduled job at an old checkout that still has `DATABASE_URL`.

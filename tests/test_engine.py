@@ -208,6 +208,16 @@ class TestSimulationSmoke(unittest.TestCase):
         self.assertGreater(result["clubs"]["BAY"]["win_probability"], result["clubs"]["SAB"]["win_probability"])
 
 
+class TestModelGuard(unittest.TestCase):
+    def test_older_model_cannot_replace_a_newer_one(self):
+        from src.store import is_downgrade
+
+        self.assertTrue(is_downgrade("1.0.0", "1.1.0"))
+        self.assertFalse(is_downgrade("1.1.0", "1.0.0"))
+        self.assertFalse(is_downgrade("1.1.0", "1.1.0"))
+        self.assertFalse(is_downgrade("1.10.0", "1.9.0"))
+
+
 class TestLeaguePrior(unittest.TestCase):
     def test_titles_do_not_set_the_rating(self):
         from src.elo import assign_rating_seeds
