@@ -2,7 +2,7 @@
   "_meta": {
     "competition": "UEFA Champions League 2026/27",
     "source": "UEFA league-phase list and coefficient pots",
-    "elo_note": "elo_seed = 1480 + 3.6 * UEFA coefficient. ClubElo CSV replaces this when the file is present."
+    "elo_note": "Rating seed is the domestic league prior, not the UEFA coefficient. Coefficient remains the last table tie-break only."
   },
   "clubs": {
     "PSG": {

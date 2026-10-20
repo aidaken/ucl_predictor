@@ -66,7 +66,7 @@ def get_implied_probs(registry: ClubRegistry, active: list[str]) -> dict[str, fl
         logger.warning("Odds API failed: %s", exc)
         return None
     if not events:
-        logger.warning("Odds API unavailable, odds weight will be redistributed")
+        logger.warning("Odds API unavailable")
         return None
 
     buckets: dict[str, list[float]] = {}

@@ -50,23 +50,32 @@ def attack_defense(club: dict[str, Any]) -> tuple[float, float]:
     attack *= injury
     defense *= 0.65 + 0.35 * injury
 
-    parts: list[float] = []
+    rest = float(club.get("rest_multiplier") or 1.0)
+    attack *= rest
+    defense *= 0.5 + 0.5 * rest
+
     if club.get("has_value") and club.get("squad_value_normalized") is not None:
-        parts.append(float(club["squad_value_normalized"]))
+        squad = float(club["squad_value_normalized"])
+        attack *= 1.0 + (squad - 0.5) * config.SQUAD_TILT
+
     if club.get("has_betting") and club.get("betting_implied_prob") is not None:
-        # Implied probs are small (they sum to 1). Stretch the rank signal:
-        # a club at 3x the equal share is hot, a club at 0 is cold.
         equal = float(club.get("betting_equal_share") or 0.0)
         implied = float(club["betting_implied_prob"])
-        if equal > 0:
-            parts.append(max(0.0, min(1.0, implied / (equal * 4.0))))
-        else:
-            parts.append(implied)
-    if parts:
-        idx = sum(parts) / len(parts)
-        attack *= 1.0 + (idx - 0.5) * config.SQUAD_ODDS_TILT
+        idx = _market_index(implied, equal)
+        shift = (idx - 0.5) * config.MARKET_TILT
+        attack *= 1.0 + shift
+        defense *= 1.0 + shift * 0.55
 
     return max(attack, 0.2), max(defense, 0.2)
+
+
+def _market_index(implied: float, equal: float) -> float:
+    """Log stretch so a 23% title price and a 10% price do not both hit the ceiling."""
+    if implied <= 0 or equal <= 0:
+        return 0.5
+    ratio = max(implied / equal, 0.05)
+    idx = 0.5 + 0.18 * math.log(ratio)
+    return min(0.95, max(0.08, idx))
 
 
 def expected_goals(

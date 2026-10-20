@@ -50,9 +50,9 @@ def _perspective(match: dict[str, Any]) -> tuple[float, float, float, bool]:
     goals_against = match.get("score_away") if home else match.get("score_home")
     if xg_for is not None and xg_against is not None:
         return float(xg_for), float(xg_against), float(goals_for or 0), True
-    gf = float(goals_for or 0)
-    ga = float(goals_against or 0)
-    return max(gf, 0.15), max(ga, 0.15), gf, False
+    gf = min(max(float(goals_for or 0), 0.15), 4.0)
+    ga = min(max(float(goals_against or 0), 0.15), 4.0)
+    return gf, ga, float(goals_for or 0), False
 
 
 def calculate_form_ratios(
@@ -82,6 +82,8 @@ def calculate_form_ratios(
     raw_rates: dict[str, dict[str, float]] = {}
 
     for tid, matches in by_team.items():
+        if team_ids is not None and tid not in team_ids:
+            continue
         if not matches:
             ratios[tid] = 0.5
             meta[tid] = {

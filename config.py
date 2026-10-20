@@ -5,15 +5,16 @@ Weights, scales, and league ids live here. Don't hardcode them in src/.
 
 import os
 
-MODEL_VERSION = "1.0.0"
+MODEL_VERSION = "1.1.0"
 
-# Signal blend for the published strength number. Must sum to 1.0.
-# Match lambdas use Elo + xG directly; squad value and odds tilt attack on top.
+# Published strength blend. Must sum to 1.0.
+# Lambdas do not use this blend. They use a league-level Elo prior, recent
+# goals, then separate market and squad tilts. Past UCL titles are not an input.
 WEIGHTS = {
-    "elo": 0.35,
-    "xg_form": 0.30,
-    "squad_value": 0.15,
-    "betting_odds": 0.20,
+    "elo": 0.22,
+    "xg_form": 0.33,
+    "squad_value": 0.10,
+    "betting_odds": 0.35,
 }
 
 ELO_SCALE = 400
@@ -28,8 +29,12 @@ BASE_XG = 1.40
 # That is two matchdays of a home-heavy start, so the prior stays at 1.28:
 # better than 1.18 on the sample (Brier 0.530 vs 0.541) without chasing the edge.
 HOME_ADV = 1.28
-# How far squad value + outright odds pull attack off the Elo/xG rate.
-SQUAD_ODDS_TILT = 0.22
+# Squad value nudges attack inside a league. It is depth, not a trophy count.
+SQUAD_TILT = 0.12
+# Outright markets (Polymarket, books) move attack and, more gently, defense.
+MARKET_TILT = 0.45
+# Within a league, the richest squad sits this far above the poorest, in Elo.
+LEAGUE_SQUAD_SPREAD = 70.0
 XG_BLEND = 0.55
 XG_TRUST_GAMES = 6.0
 LAMBDA_MIN = 0.15
@@ -77,6 +82,38 @@ XG_ADJ_CLAMP_HI = 1.35
 
 N_SIMULATIONS = 8_000
 DEMO_SIMULATIONS = 400
+
+# Snapshot date for rest. Remaining matches are a season, so load is a trim,
+# not a one-week fatigue tax on every kick.
+AS_OF = "2026-10-15"
+REST_WINDOW_DAYS = 28
+REST_BASELINE_MATCHES = 4
+REST_EXTRA_PENALTY = 0.012
+REST_FLOOR = 0.94
+
+POLYMARKET_EVENT_SLUG = "uefa-champions-league-2027-champion-20260701202025549"
+POLYMARKET_GAMMA = "https://gamma-api.polymarket.com"
+
+# Domestic league quality on a ClubElo-shaped scale. Same league, same base.
+# A club's own European history does not add points on top.
+LEAGUE_ELO = {
+    "ENG": 1765,
+    "ESP": 1755,
+    "GER": 1750,
+    "ITA": 1735,
+    "FRA": 1725,
+    "POR": 1665,
+    "NED": 1655,
+    "BEL": 1625,
+    "TUR": 1615,
+    "AUT": 1585,
+    "GRE": 1575,
+    "CZE": 1565,
+    "UKR": 1555,
+    "NOR": 1545,
+    "SVK": 1525,
+    "AZE": 1485,
+}
 
 # API-Football competition ids. Domestic ids are only queried for the 36 clubs.
 UCL_LEAGUE_ID = 2

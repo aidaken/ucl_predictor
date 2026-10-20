@@ -1,21 +1,24 @@
 {
   "_meta": {
-    "model_version": "1.0.0",
-    "generated_at": "2026-10-15T21:06:56+00:00",
+    "model_version": "1.1.0",
+    "generated_at": "2026-10-15T21:26:42+00:00",
     "simulations": 4000,
     "weights": {
-      "elo": 0.35,
-      "xg_form": 0.3,
-      "squad_value": 0.15,
-      "betting_odds": 0.2
+      "elo": 0.22,
+      "xg_form": 0.33,
+      "squad_value": 0.1,
+      "betting_odds": 0.35
     },
     "home_advantage": 1.28,
     "base_xg": 1.4,
     "competition": "UEFA Champions League 2026/27",
     "data_sources": {
-      "fixtures": "uefa league phase through 14 Oct 2026, plus API-Football when --live",
-      "elo": "UEFA coefficient prior (1480 + 3.6 * coefficient), replayed through played UCL matches",
-      "health": "API-Football domestic league + UCL, 36 clubs only"
+      "fixtures": "UEFA league phase through 14 Oct 2026",
+      "other_competitions": "ESPN domestic leagues and cups, 15 Sep–15 Oct 2026",
+      "elo": "Domestic league prior plus squad value inside that league, replayed through played UCL matches. UEFA coefficient is a table tie-break only.",
+      "markets": "polymarket",
+      "health": "API-Football domestic league plus UCL, 36 clubs only. Empty until a key is set.",
+      "rest": "Finished matches in the 28 days before 15 Oct 2026"
     }
   },
   "table": [
@@ -33,10 +36,10 @@
       "draws": 0,
       "losses": 0,
       "name": "Paris Saint-Germain",
-      "top8_probability": 0.709,
-      "playoff_probability": 0.279,
-      "eliminated_probability": 0.012,
-      "win_probability": 0.1022
+      "top8_probability": 0.7895,
+      "playoff_probability": 0.2087,
+      "eliminated_probability": 0.0018,
+      "win_probability": 0.1565
     },
     {
       "club_id": "BAR",
@@ -52,10 +55,10 @@
       "draws": 0,
       "losses": 0,
       "name": "Barcelona",
-      "top8_probability": 0.6745,
-      "playoff_probability": 0.3135,
-      "eliminated_probability": 0.012,
-      "win_probability": 0.0853
+      "top8_probability": 0.8075,
+      "playoff_probability": 0.1903,
+      "eliminated_probability": 0.0022,
+      "win_probability": 0.187
     },
     {
       "club_id": "AVL",
@@ -71,10 +74,10 @@
       "draws": 0,
       "losses": 0,
       "name": "Aston Villa",
-      "top8_probability": 0.5487,
-      "playoff_probability": 0.4245,
-      "eliminated_probability": 0.0267,
-      "win_probability": 0.038
+      "top8_probability": 0.6158,
+      "playoff_probability": 0.3755,
+      "eliminated_probability": 0.0088,
+      "win_probability": 0.037
     },
     {
       "club_id": "STU",
@@ -90,10 +93,10 @@
       "draws": 0,
       "losses": 0,
       "name": "VfB Stuttgart",
-      "top8_probability": 0.359,
-      "playoff_probability": 0.5697,
-      "eliminated_probability": 0.0712,
-      "win_probability": 0.0107
+      "top8_probability": 0.45,
+      "playoff_probability": 0.5265,
+      "eliminated_probability": 0.0235,
+      "win_probability": 0.011
     },
     {
       "club_id": "LIV",
@@ -109,10 +112,10 @@
       "draws": 0,
       "losses": 0,
       "name": "Liverpool",
-      "top8_probability": 0.7278,
-      "playoff_probability": 0.2625,
-      "eliminated_probability": 0.0097,
-      "win_probability": 0.1077
+      "top8_probability": 0.786,
+      "playoff_probability": 0.2115,
+      "eliminated_probability": 0.0025,
+      "win_probability": 0.0737
     },
     {
       "club_id": "SCP",
@@ -128,10 +131,10 @@
       "draws": 0,
       "losses": 0,
       "name": "Sporting CP",
-      "top8_probability": 0.4323,
-      "playoff_probability": 0.5215,
-      "eliminated_probability": 0.0462,
-      "win_probability": 0.0278
+      "top8_probability": 0.2482,
+      "playoff_probability": 0.678,
+      "eliminated_probability": 0.0737,
+      "win_probability": 0.0037
     },
     {
       "club_id": "ARS",
@@ -147,10 +150,10 @@
       "draws": 0,
       "losses": 0,
       "name": "Arsenal",
-      "top8_probability": 0.6498,
-      "playoff_probability": 0.3355,
-      "eliminated_probability": 0.0147,
-      "win_probability": 0.0945
+      "top8_probability": 0.7195,
+      "playoff_probability": 0.2737,
+      "eliminated_probability": 0.0067,
+      "win_probability": 0.1047
     },
     {
       "club_id": "RMA",
@@ -166,10 +169,10 @@
       "draws": 0,
       "losses": 0,
       "name": "Real Madrid",
-      "top8_probability": 0.7705,
-      "playoff_probability": 0.2225,
-      "eliminated_probability": 0.007,
-      "win_probability": 0.1417
+      "top8_probability": 0.8698,
+      "playoff_probability": 0.1293,
+      "eliminated_probability": 0.001,
+      "win_probability": 0.1415
     },
     {
       "club_id": "BET",
@@ -185,10 +188,10 @@
       "draws": 0,
       "losses": 0,
       "name": "Real Betis",
-      "top8_probability": 0.3925,
-      "playoff_probability": 0.536,
-      "eliminated_probability": 0.0715,
-      "win_probability": 0.0155
+      "top8_probability": 0.3063,
+      "playoff_probability": 0.6342,
+      "eliminated_probability": 0.0595,
+      "win_probability": 0.0073
     },
     {
       "club_id": "BAY",
@@ -204,10 +207,10 @@
       "draws": 1,
       "losses": 0,
       "name": "Bayern Munich",
-      "top8_probability": 0.4602,
-      "playoff_probability": 0.4893,
-      "eliminated_probability": 0.0505,
-      "win_probability": 0.0925
+      "top8_probability": 0.5517,
+      "playoff_probability": 0.4305,
+      "eliminated_probability": 0.0177,
+      "win_probability": 0.0965
     },
     {
       "club_id": "SHK",
@@ -223,10 +226,10 @@
       "draws": 1,
       "losses": 0,
       "name": "Shakhtar Donetsk",
-      "top8_probability": 0.1715,
-      "playoff_probability": 0.6252,
-      "eliminated_probability": 0.2032,
-      "win_probability": 0.0107
+      "top8_probability": 0.082,
+      "playoff_probability": 0.6573,
+      "eliminated_probability": 0.2607,
+      "win_probability": 0.0005
     },
     {
       "club_id": "COM",
@@ -242,10 +245,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Como",
-      "top8_probability": 0.0653,
-      "playoff_probability": 0.5363,
-      "eliminated_probability": 0.3985,
-      "win_probability": 0.004
+      "top8_probability": 0.0558,
+      "playoff_probability": 0.609,
+      "eliminated_probability": 0.3352,
+      "win_probability": 0.0018
     },
     {
       "club_id": "MUN",
@@ -261,10 +264,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Manchester United",
-      "top8_probability": 0.2,
-      "playoff_probability": 0.6192,
-      "eliminated_probability": 0.1807,
-      "win_probability": 0.0255
+      "top8_probability": 0.1978,
+      "playoff_probability": 0.6803,
+      "eliminated_probability": 0.122,
+      "win_probability": 0.0145
     },
     {
       "club_id": "VIL",
@@ -280,10 +283,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Villarreal",
-      "top8_probability": 0.119,
-      "playoff_probability": 0.5992,
-      "eliminated_probability": 0.2818,
-      "win_probability": 0.0075
+      "top8_probability": 0.1037,
+      "playoff_probability": 0.6745,
+      "eliminated_probability": 0.2218,
+      "win_probability": 0.0053
     },
     {
       "club_id": "ATM",
@@ -299,10 +302,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Atlético Madrid",
-      "top8_probability": 0.2732,
-      "playoff_probability": 0.6042,
-      "eliminated_probability": 0.1225,
-      "win_probability": 0.04
+      "top8_probability": 0.331,
+      "playoff_probability": 0.6108,
+      "eliminated_probability": 0.0583,
+      "win_probability": 0.0398
     },
     {
       "club_id": "BRU",
@@ -318,10 +321,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Club Brugge",
-      "top8_probability": 0.1742,
-      "playoff_probability": 0.6078,
-      "eliminated_probability": 0.218,
-      "win_probability": 0.018
+      "top8_probability": 0.1015,
+      "playoff_probability": 0.6617,
+      "eliminated_probability": 0.2367,
+      "win_probability": 0.0027
     },
     {
       "club_id": "MCI",
@@ -337,10 +340,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Manchester City",
-      "top8_probability": 0.3528,
-      "playoff_probability": 0.5627,
-      "eliminated_probability": 0.0845,
-      "win_probability": 0.0808
+      "top8_probability": 0.4622,
+      "playoff_probability": 0.5072,
+      "eliminated_probability": 0.0305,
+      "win_probability": 0.0953
     },
     {
       "club_id": "DOR",
@@ -356,10 +359,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Borussia Dortmund",
-      "top8_probability": 0.178,
-      "playoff_probability": 0.627,
-      "eliminated_probability": 0.195,
-      "win_probability": 0.021
+      "top8_probability": 0.14,
+      "playoff_probability": 0.688,
+      "eliminated_probability": 0.172,
+      "win_probability": 0.007
     },
     {
       "club_id": "LEN",
@@ -375,10 +378,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Lens",
-      "top8_probability": 0.051,
-      "playoff_probability": 0.503,
-      "eliminated_probability": 0.446,
-      "win_probability": 0.0013
+      "top8_probability": 0.0403,
+      "playoff_probability": 0.5547,
+      "eliminated_probability": 0.405,
+      "win_probability": 0.0008
     },
     {
       "club_id": "AEK",
@@ -394,10 +397,10 @@
       "draws": 0,
       "losses": 1,
       "name": "AEK Athens",
-      "top8_probability": 0.0415,
-      "playoff_probability": 0.4562,
-      "eliminated_probability": 0.5022,
-      "win_probability": 0.0015
+      "top8_probability": 0.0158,
+      "playoff_probability": 0.45,
+      "eliminated_probability": 0.5343,
+      "win_probability": 0.0005
     },
     {
       "club_id": "RBL",
@@ -413,10 +416,10 @@
       "draws": 0,
       "losses": 1,
       "name": "RB Leipzig",
-      "top8_probability": 0.0823,
-      "playoff_probability": 0.532,
-      "eliminated_probability": 0.3857,
-      "win_probability": 0.0092
+      "top8_probability": 0.0355,
+      "playoff_probability": 0.536,
+      "eliminated_probability": 0.4285,
+      "win_probability": 0.0005
     },
     {
       "club_id": "SAB",
@@ -432,10 +435,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Sabah",
-      "top8_probability": 0.0355,
-      "playoff_probability": 0.4285,
-      "eliminated_probability": 0.536,
-      "win_probability": 0.0003
+      "top8_probability": 0.0083,
+      "playoff_probability": 0.3385,
+      "eliminated_probability": 0.6532,
+      "win_probability": 0.0
     },
     {
       "club_id": "FEY",
@@ -451,10 +454,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Feyenoord",
-      "top8_probability": 0.1358,
-      "playoff_probability": 0.5925,
-      "eliminated_probability": 0.2717,
-      "win_probability": 0.0105
+      "top8_probability": 0.067,
+      "playoff_probability": 0.6295,
+      "eliminated_probability": 0.3035,
+      "win_probability": 0.0003
     },
     {
       "club_id": "BOD",
@@ -470,10 +473,10 @@
       "draws": 0,
       "losses": 1,
       "name": "Bodø/Glimt",
-      "top8_probability": 0.1108,
-      "playoff_probability": 0.5817,
-      "eliminated_probability": 0.3075,
-      "win_probability": 0.006
+      "top8_probability": 0.0512,
+      "playoff_probability": 0.5653,
+      "eliminated_probability": 0.3835,
+      "win_probability": 0.0003
     },
     {
       "club_id": "ROM",
@@ -489,10 +492,10 @@
       "draws": 1,
       "losses": 1,
       "name": "Roma",
-      "top8_probability": 0.0585,
-      "playoff_probability": 0.5165,
-      "eliminated_probability": 0.425,
-      "win_probability": 0.0107
+      "top8_probability": 0.0272,
+      "playoff_probability": 0.5365,
+      "eliminated_probability": 0.4363,
+      "win_probability": 0.0018
     },
     {
       "club_id": "PSV",
@@ -508,10 +511,10 @@
       "draws": 1,
       "losses": 1,
       "name": "PSV Eindhoven",
-      "top8_probability": 0.0307,
-      "playoff_probability": 0.418,
-      "eliminated_probability": 0.5513,
-      "win_probability": 0.005
+      "top8_probability": 0.0123,
+      "playoff_probability": 0.332,
+      "eliminated_probability": 0.6558,
+      "win_probability": 0.0008
     },
     {
       "club_id": "VIK",
@@ -527,10 +530,10 @@
       "draws": 1,
       "losses": 1,
       "name": "Viking",
-      "top8_probability": 0.0203,
-      "playoff_probability": 0.3573,
-      "eliminated_probability": 0.6225,
-      "win_probability": 0.001
+      "top8_probability": 0.0092,
+      "playoff_probability": 0.37,
+      "eliminated_probability": 0.6208,
+      "win_probability": 0.0
     },
     {
       "club_id": "FEN",
@@ -546,10 +549,10 @@
       "draws": 1,
       "losses": 1,
       "name": "Fenerbahçe",
-      "top8_probability": 0.0253,
-      "playoff_probability": 0.3623,
-      "eliminated_probability": 0.6125,
-      "win_probability": 0.0022
+      "top8_probability": 0.0135,
+      "playoff_probability": 0.356,
+      "eliminated_probability": 0.6305,
+      "win_probability": 0.0008
     },
     {
       "club_id": "INT",
@@ -565,10 +568,10 @@
       "draws": 0,
       "losses": 2,
       "name": "Inter",
-      "top8_probability": 0.05,
-      "playoff_probability": 0.4883,
-      "eliminated_probability": 0.4617,
-      "win_probability": 0.017
+      "top8_probability": 0.0452,
+      "playoff_probability": 0.5597,
+      "eliminated_probability": 0.395,
+      "win_probability": 0.0057
     },
     {
       "club_id": "POR",
@@ -584,10 +587,10 @@
       "draws": 0,
       "losses": 2,
       "name": "Porto",
-      "top8_probability": 0.0262,
-      "playoff_probability": 0.404,
-      "eliminated_probability": 0.5697,
-      "win_probability": 0.0035
+      "top8_probability": 0.0145,
+      "playoff_probability": 0.427,
+      "eliminated_probability": 0.5585,
+      "win_probability": 0.0008
     },
     {
       "club_id": "SLP",
@@ -603,10 +606,10 @@
       "draws": 0,
       "losses": 2,
       "name": "Slavia Prague",
-      "top8_probability": 0.0055,
-      "playoff_probability": 0.178,
-      "eliminated_probability": 0.8165,
-      "win_probability": 0.0005
+      "top8_probability": 0.0013,
+      "playoff_probability": 0.1067,
+      "eliminated_probability": 0.892,
+      "win_probability": 0.0
     },
     {
       "club_id": "NAP",
@@ -622,10 +625,10 @@
       "draws": 0,
       "losses": 2,
       "name": "Napoli",
-      "top8_probability": 0.028,
-      "playoff_probability": 0.3745,
-      "eliminated_probability": 0.5975,
-      "win_probability": 0.0022
+      "top8_probability": 0.019,
+      "playoff_probability": 0.4948,
+      "eliminated_probability": 0.4863,
+      "win_probability": 0.002
     },
     {
       "club_id": "LAS",
@@ -641,10 +644,10 @@
       "draws": 0,
       "losses": 2,
       "name": "LASK",
-      "top8_probability": 0.0055,
-      "playoff_probability": 0.206,
-      "eliminated_probability": 0.7885,
-      "win_probability": 0.0003
+      "top8_probability": 0.0027,
+      "playoff_probability": 0.2507,
+      "eliminated_probability": 0.7465,
+      "win_probability": 0.0
     },
     {
       "club_id": "LIL",
@@ -660,10 +663,10 @@
       "draws": 0,
       "losses": 2,
       "name": "Lille",
-      "top8_probability": 0.014,
-      "playoff_probability": 0.341,
-      "eliminated_probability": 0.645,
-      "win_probability": 0.0027
+      "top8_probability": 0.0095,
+      "playoff_probability": 0.2765,
+      "eliminated_probability": 0.714,
+      "win_probability": 0.0
     },
     {
       "club_id": "GAL",
@@ -679,10 +682,10 @@
       "draws": 0,
       "losses": 2,
       "name": "Galatasaray",
-      "top8_probability": 0.0115,
-      "playoff_probability": 0.3045,
-      "eliminated_probability": 0.684,
-      "win_probability": 0.002
+      "top8_probability": 0.0057,
+      "playoff_probability": 0.249,
+      "eliminated_probability": 0.7452,
+      "win_probability": 0.0003
     },
     {
       "club_id": "SLO",
@@ -698,10 +701,10 @@
       "draws": 0,
       "losses": 2,
       "name": "Slovan Bratislava",
-      "top8_probability": 0.0095,
+      "top8_probability": 0.0035,
       "playoff_probability": 0.22,
-      "eliminated_probability": 0.7705,
-      "win_probability": 0.0005
+      "eliminated_probability": 0.7765,
+      "win_probability": 0.0
     }
   ],
   "clubs": [
@@ -709,1261 +712,1867 @@
       "id": "PSG",
       "name": "Paris Saint-Germain",
       "country": "FRA",
-      "elo": 1979.0,
-      "strength": 0.7099,
+      "elo": 1790.8,
+      "strength": 0.4825,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1979.0,
-        "elo_normalized": 0.9077,
+        "elo": 1790.8,
+        "rating_seed": 1760.0,
+        "elo_normalized": 0.8962,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.856,
+        "matches_used": 6,
+        "avg_xg_for": 1.896,
+        "avg_xg_against": 1.357,
+        "sos_multiplier": 0.93,
         "squad_value_eur": 840000000,
         "squad_value_normalized": 0.668,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.1531,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 5,
+          "competitions": [
+            "Champions League",
+            "Ligue 1"
+          ],
+          "multiplier": 0.988
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.1022,
-        "top8_probability": 0.709,
-        "playoff_probability": 0.279,
-        "eliminated_probability": 0.012,
-        "reach_r16_probability": 0.8988,
-        "reach_qf_probability": 0.566,
-        "reach_sf_probability": 0.3382,
-        "reach_final_probability": 0.1938,
-        "mean_rank": 6.71
-      }
+        "win_probability": 0.1565,
+        "top8_probability": 0.7895,
+        "playoff_probability": 0.2087,
+        "eliminated_probability": 0.0018,
+        "reach_r16_probability": 0.9667,
+        "reach_qf_probability": 0.7298,
+        "reach_sf_probability": 0.4765,
+        "reach_final_probability": 0.29,
+        "mean_rank": 5.55
+      },
+      "report": "Paris Saint-Germain is rated from the French league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 15.3% to win the title. The last 6 matches (goals adj) average 1.896 goals for and 1.357 against, with Champions League games counted twice and domestic games counted once. They have played 5 times in the last 28 days (Champions League, Ligue 1). Goal rates are trimmed to 0.988. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "BAR",
       "name": "Barcelona",
       "country": "ESP",
-      "elo": 1907.5,
-      "strength": 0.6704,
+      "elo": 1795.7,
+      "strength": 0.5249,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1907.5,
-        "elo_normalized": 0.7688,
+        "elo": 1795.7,
+        "rating_seed": 1772.3,
+        "elo_normalized": 0.9114,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.862,
+        "matches_used": 5,
+        "avg_xg_for": 1.908,
+        "avg_xg_against": 1.4,
+        "sos_multiplier": 0.828,
         "squad_value_eur": 980000000,
         "squad_value_normalized": 0.7814,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.2321,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "La Liga"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0853,
-        "top8_probability": 0.6745,
-        "playoff_probability": 0.3135,
-        "eliminated_probability": 0.012,
-        "reach_r16_probability": 0.8785,
-        "reach_qf_probability": 0.5393,
-        "reach_sf_probability": 0.3118,
-        "reach_final_probability": 0.1695,
-        "mean_rank": 7.19
-      }
+        "win_probability": 0.187,
+        "top8_probability": 0.8075,
+        "playoff_probability": 0.1903,
+        "eliminated_probability": 0.0022,
+        "reach_r16_probability": 0.9683,
+        "reach_qf_probability": 0.7382,
+        "reach_sf_probability": 0.5035,
+        "reach_final_probability": 0.313,
+        "mean_rank": 5.23
+      },
+      "report": "Barcelona is rated from the Spanish league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 23.2% to win the title. The last 5 matches (goals adj) average 1.908 goals for and 1.4 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, La Liga). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run. The simulations finish 4.5 points below that market price."
     },
     {
       "id": "AVL",
       "name": "Aston Villa",
       "country": "ENG",
-      "elo": 1811.5,
-      "strength": 0.4992,
+      "elo": 1755.7,
+      "strength": 0.3725,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1811.5,
-        "elo_normalized": 0.5824,
+        "elo": 1755.7,
+        "rating_seed": 1730.0,
+        "elo_normalized": 0.7871,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.898,
+        "matches_used": 5,
+        "avg_xg_for": 2.055,
+        "avg_xg_against": 1.253,
+        "sos_multiplier": 1.014,
         "squad_value_eur": 390000000,
         "squad_value_normalized": 0.3036,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0114,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Premier League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.038,
-        "top8_probability": 0.5487,
-        "playoff_probability": 0.4245,
-        "eliminated_probability": 0.0267,
-        "reach_r16_probability": 0.7857,
-        "reach_qf_probability": 0.3987,
-        "reach_sf_probability": 0.19,
-        "reach_final_probability": 0.087,
-        "mean_rank": 9.02
-      }
+        "win_probability": 0.037,
+        "top8_probability": 0.6158,
+        "playoff_probability": 0.3755,
+        "eliminated_probability": 0.0088,
+        "reach_r16_probability": 0.8808,
+        "reach_qf_probability": 0.5005,
+        "reach_sf_probability": 0.2235,
+        "reach_final_probability": 0.0958,
+        "mean_rank": 7.97
+      },
+      "report": "Aston Villa is rated from the English league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 1.1% to win the title. The last 5 matches (goals adj) average 2.055 goals for and 1.253 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Premier League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run. The simulations finish 2.6 points above that market price."
     },
     {
       "id": "STU",
       "name": "VfB Stuttgart",
       "country": "GER",
-      "elo": 1615.7,
-      "strength": 0.3237,
+      "elo": 1733.7,
+      "strength": 0.3505,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1615.7,
-        "elo_normalized": 0.202,
+        "elo": 1733.7,
+        "rating_seed": 1715.0,
+        "elo_normalized": 0.7188,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.832,
+        "matches_used": 4,
+        "avg_xg_for": 1.592,
+        "avg_xg_against": 1.248,
+        "sos_multiplier": 0.875,
         "squad_value_eur": 330000000,
         "squad_value_normalized": 0.2551,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0054,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Bundesliga",
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0107,
-        "top8_probability": 0.359,
-        "playoff_probability": 0.5697,
-        "eliminated_probability": 0.0712,
-        "reach_r16_probability": 0.618,
-        "reach_qf_probability": 0.23,
-        "reach_sf_probability": 0.0775,
-        "reach_final_probability": 0.0275,
-        "mean_rank": 12.42
-      }
+        "win_probability": 0.011,
+        "top8_probability": 0.45,
+        "playoff_probability": 0.5265,
+        "eliminated_probability": 0.0235,
+        "reach_r16_probability": 0.741,
+        "reach_qf_probability": 0.3127,
+        "reach_sf_probability": 0.1067,
+        "reach_final_probability": 0.035,
+        "mean_rank": 10.21
+      },
+      "report": "VfB Stuttgart is rated from the German league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.5% to win the title. The last 4 matches (goals adj) average 1.592 goals for and 1.248 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Bundesliga, Champions League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "LIV",
       "name": "Liverpool",
       "country": "ENG",
-      "elo": 1966.1,
-      "strength": 0.702,
+      "elo": 1798.7,
+      "strength": 0.4515,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1966.1,
-        "elo_normalized": 0.8827,
+        "elo": 1798.7,
+        "rating_seed": 1771.6,
+        "elo_normalized": 0.9208,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.941,
+        "matches_used": 5,
+        "avg_xg_for": 1.82,
+        "avg_xg_against": 1.481,
+        "sos_multiplier": 1.027,
         "squad_value_eur": 860000000,
         "squad_value_normalized": 0.6842,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0444,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Premier League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.1077,
-        "top8_probability": 0.7278,
-        "playoff_probability": 0.2625,
-        "eliminated_probability": 0.0097,
-        "reach_r16_probability": 0.9117,
-        "reach_qf_probability": 0.583,
-        "reach_sf_probability": 0.3548,
-        "reach_final_probability": 0.1973,
-        "mean_rank": 6.53
-      }
+        "win_probability": 0.0737,
+        "top8_probability": 0.786,
+        "playoff_probability": 0.2115,
+        "eliminated_probability": 0.0025,
+        "reach_r16_probability": 0.9377,
+        "reach_qf_probability": 0.615,
+        "reach_sf_probability": 0.3325,
+        "reach_final_probability": 0.1635,
+        "mean_rank": 5.8
+      },
+      "report": "Liverpool is rated from the English league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 4.4% to win the title. The last 5 matches (goals adj) average 1.82 goals for and 1.481 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Premier League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run. The simulations finish 2.9 points above that market price."
     },
     {
       "id": "SCP",
       "name": "Sporting CP",
       "country": "POR",
-      "elo": 1804.7,
-      "strength": 0.4798,
+      "elo": 1674.2,
+      "strength": 0.3074,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1804.7,
-        "elo_normalized": 0.5692,
+        "elo": 1674.2,
+        "rating_seed": 1630.0,
+        "elo_normalized": 0.5339,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.889,
+        "matches_used": 4,
+        "avg_xg_for": 1.52,
+        "avg_xg_against": 1.404,
+        "sos_multiplier": 0.838,
         "squad_value_eur": 300000000,
         "squad_value_normalized": 0.2308,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0054,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Primeira Liga"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0278,
-        "top8_probability": 0.4323,
-        "playoff_probability": 0.5215,
-        "eliminated_probability": 0.0462,
-        "reach_r16_probability": 0.7097,
-        "reach_qf_probability": 0.3295,
-        "reach_sf_probability": 0.1457,
-        "reach_final_probability": 0.0673,
-        "mean_rank": 11.02
-      }
+        "win_probability": 0.0037,
+        "top8_probability": 0.2482,
+        "playoff_probability": 0.678,
+        "eliminated_probability": 0.0737,
+        "reach_r16_probability": 0.5813,
+        "reach_qf_probability": 0.1903,
+        "reach_sf_probability": 0.06,
+        "reach_final_probability": 0.0168,
+        "mean_rank": 13.68
+      },
+      "report": "Sporting CP is rated from the Portuguese league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.5% to win the title. The last 4 matches (goals adj) average 1.52 goals for and 1.404 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Primeira Liga). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "ARS",
       "name": "Arsenal",
       "country": "ENG",
-      "elo": 1927.1,
-      "strength": 0.6977,
+      "elo": 1818.6,
+      "strength": 0.5116,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1927.1,
-        "elo_normalized": 0.8069,
+        "elo": 1818.6,
+        "rating_seed": 1788.5,
+        "elo_normalized": 0.9826,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.869,
+        "matches_used": 5,
+        "avg_xg_for": 1.582,
+        "avg_xg_against": 1.546,
+        "sos_multiplier": 0.856,
         "squad_value_eur": 1050000000,
         "squad_value_normalized": 0.8381,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.1333,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Premier League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0945,
-        "top8_probability": 0.6498,
-        "playoff_probability": 0.3355,
-        "eliminated_probability": 0.0147,
-        "reach_r16_probability": 0.8645,
-        "reach_qf_probability": 0.5333,
-        "reach_sf_probability": 0.3008,
-        "reach_final_probability": 0.1683,
-        "mean_rank": 7.64
-      }
+        "win_probability": 0.1047,
+        "top8_probability": 0.7195,
+        "playoff_probability": 0.2737,
+        "eliminated_probability": 0.0067,
+        "reach_r16_probability": 0.9307,
+        "reach_qf_probability": 0.6268,
+        "reach_sf_probability": 0.3663,
+        "reach_final_probability": 0.1908,
+        "mean_rank": 6.59
+      },
+      "report": "Arsenal is rated from the English league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 13.3% to win the title. The last 5 matches (goals adj) average 1.582 goals for and 1.546 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Premier League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run. The simulations finish 2.9 points below that market price."
     },
     {
       "id": "RMA",
       "name": "Real Madrid",
       "country": "ESP",
-      "elo": 2026.5,
-      "strength": 0.8125,
+      "elo": 1824.2,
+      "strength": 0.5213,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 2026.5,
+        "elo": 1824.2,
+        "rating_seed": 1790.0,
         "elo_normalized": 1.0,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.946,
+        "matches_used": 5,
+        "avg_xg_for": 1.863,
+        "avg_xg_against": 1.513,
+        "sos_multiplier": 1.012,
         "squad_value_eur": 1250000000,
         "squad_value_normalized": 1.0,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.1037,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "La Liga"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.1417,
-        "top8_probability": 0.7705,
-        "playoff_probability": 0.2225,
-        "eliminated_probability": 0.007,
-        "reach_r16_probability": 0.9247,
-        "reach_qf_probability": 0.6285,
-        "reach_sf_probability": 0.4015,
-        "reach_final_probability": 0.25,
-        "mean_rank": 5.77
-      }
+        "win_probability": 0.1415,
+        "top8_probability": 0.8698,
+        "playoff_probability": 0.1293,
+        "eliminated_probability": 0.001,
+        "reach_r16_probability": 0.9722,
+        "reach_qf_probability": 0.726,
+        "reach_sf_probability": 0.4535,
+        "reach_final_probability": 0.2687,
+        "mean_rank": 4.47
+      },
+      "report": "Real Madrid is rated from the Spanish league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 10.4% to win the title. The last 5 matches (goals adj) average 1.863 goals for and 1.513 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, La Liga). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run. The simulations finish 3.8 points above that market price."
     },
     {
       "id": "BET",
       "name": "Real Betis",
       "country": "ESP",
-      "elo": 1786.6,
-      "strength": 0.4462,
+      "elo": 1755.5,
+      "strength": 0.3543,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1786.6,
-        "elo_normalized": 0.534,
+        "elo": 1755.5,
+        "rating_seed": 1720.0,
+        "elo_normalized": 0.7865,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.872,
+        "matches_used": 5,
+        "avg_xg_for": 1.716,
+        "avg_xg_against": 1.787,
+        "sos_multiplier": 0.86,
         "squad_value_eur": 180000000,
         "squad_value_normalized": 0.1336,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0084,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 4,
+          "competitions": [
+            "Champions League",
+            "La Liga"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0155,
-        "top8_probability": 0.3925,
-        "playoff_probability": 0.536,
-        "eliminated_probability": 0.0715,
-        "reach_r16_probability": 0.666,
-        "reach_qf_probability": 0.3065,
-        "reach_sf_probability": 0.1195,
-        "reach_final_probability": 0.0413,
-        "mean_rank": 11.9
-      }
+        "win_probability": 0.0073,
+        "top8_probability": 0.3063,
+        "playoff_probability": 0.6342,
+        "eliminated_probability": 0.0595,
+        "reach_r16_probability": 0.646,
+        "reach_qf_probability": 0.239,
+        "reach_sf_probability": 0.0752,
+        "reach_final_probability": 0.0187,
+        "mean_rank": 12.62
+      },
+      "report": "Real Betis is rated from the Spanish league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.8% to win the title. The last 5 matches (goals adj) average 1.716 goals for and 1.787 against, with Champions League games counted twice and domestic games counted once. They have played 4 times in the last 28 days (Champions League, La Liga). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "BAY",
       "name": "Bayern Munich",
       "country": "GER",
-      "elo": 1998.9,
-      "strength": 0.7389,
+      "elo": 1780.6,
+      "strength": 0.4751,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1998.9,
-        "elo_normalized": 0.9464,
+        "elo": 1780.6,
+        "rating_seed": 1785.0,
+        "elo_normalized": 0.8645,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.886,
+        "matches_used": 4,
+        "avg_xg_for": 1.961,
+        "avg_xg_against": 1.671,
+        "sos_multiplier": 0.871,
         "squad_value_eur": 920000000,
         "squad_value_normalized": 0.7328,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.1333,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Bundesliga",
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0925,
-        "top8_probability": 0.4602,
-        "playoff_probability": 0.4893,
-        "eliminated_probability": 0.0505,
-        "reach_r16_probability": 0.7967,
-        "reach_qf_probability": 0.5072,
-        "reach_sf_probability": 0.3038,
-        "reach_final_probability": 0.1708,
-        "mean_rank": 10.61
-      }
+        "win_probability": 0.0965,
+        "top8_probability": 0.5517,
+        "playoff_probability": 0.4305,
+        "eliminated_probability": 0.0177,
+        "reach_r16_probability": 0.894,
+        "reach_qf_probability": 0.6012,
+        "reach_sf_probability": 0.3455,
+        "reach_final_probability": 0.1857,
+        "mean_rank": 8.8
+      },
+      "report": "Bayern Munich is rated from the German league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 13.3% to win the title. The last 4 matches (goals adj) average 1.961 goals for and 1.671 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Bundesliga, Champions League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run. The simulations finish 3.7 points below that market price."
     },
     {
       "id": "SHK",
       "name": "Shakhtar Donetsk",
       "country": "UKR",
-      "elo": 1700.0,
-      "strength": 0.3619,
+      "elo": 1584.3,
+      "strength": 0.2292,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1700.0,
-        "elo_normalized": 0.3658,
+        "elo": 1584.3,
+        "rating_seed": 1555.0,
+        "elo_normalized": 0.2545,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.969,
+        "matches_used": 2,
+        "avg_xg_for": 1.776,
+        "avg_xg_against": 1.573,
+        "sos_multiplier": 0.986,
         "squad_value_eur": 110000000,
         "squad_value_normalized": 0.0769,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0015,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": false,
+          "matches": 1,
+          "competitions": [
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0107,
-        "top8_probability": 0.1715,
-        "playoff_probability": 0.6252,
-        "eliminated_probability": 0.2032,
-        "reach_r16_probability": 0.4703,
-        "reach_qf_probability": 0.184,
-        "reach_sf_probability": 0.0712,
-        "reach_final_probability": 0.0238,
-        "mean_rank": 16.92
-      }
+        "win_probability": 0.0005,
+        "top8_probability": 0.082,
+        "playoff_probability": 0.6573,
+        "eliminated_probability": 0.2607,
+        "reach_r16_probability": 0.3307,
+        "reach_qf_probability": 0.0685,
+        "reach_sf_probability": 0.016,
+        "reach_final_probability": 0.003,
+        "mean_rank": 19.03
+      },
+      "report": "Shakhtar Donetsk is rated from the Ukrainian league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.1% to win the title. The last 2 matches (goals adj) average 1.776 goals for and 1.573 against, with Champions League games counted twice and domestic games counted once. No domestic calendar was matched, so rest is left neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "COM",
       "name": "Como",
       "country": "ITA",
-      "elo": 1567.8,
-      "strength": 0.2572,
+      "elo": 1694.8,
+      "strength": 0.3112,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1567.8,
-        "elo_normalized": 0.109,
+        "elo": 1694.8,
+        "rating_seed": 1700.0,
+        "elo_normalized": 0.5979,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.903,
+        "matches_used": 4,
+        "avg_xg_for": 1.518,
+        "avg_xg_against": 1.671,
+        "sos_multiplier": 0.911,
         "squad_value_eur": 160000000,
         "squad_value_normalized": 0.1174,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0084,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Serie A"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.004,
-        "top8_probability": 0.0653,
-        "playoff_probability": 0.5363,
-        "eliminated_probability": 0.3985,
-        "reach_r16_probability": 0.272,
-        "reach_qf_probability": 0.0892,
-        "reach_sf_probability": 0.0305,
-        "reach_final_probability": 0.0107,
-        "mean_rank": 21.51
-      }
+        "win_probability": 0.0018,
+        "top8_probability": 0.0558,
+        "playoff_probability": 0.609,
+        "eliminated_probability": 0.3352,
+        "reach_r16_probability": 0.341,
+        "reach_qf_probability": 0.1037,
+        "reach_sf_probability": 0.0302,
+        "reach_final_probability": 0.007,
+        "mean_rank": 20.66
+      },
+      "report": "Como is rated from the Italian league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.8% to win the title. The last 4 matches (goals adj) average 1.518 goals for and 1.671 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Serie A). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "MUN",
       "name": "Manchester United",
       "country": "ENG",
-      "elo": 1747.4,
-      "strength": 0.4979,
+      "elo": 1745.4,
+      "strength": 0.3945,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1747.4,
-        "elo_normalized": 0.4578,
+        "elo": 1745.4,
+        "rating_seed": 1761.0,
+        "elo_normalized": 0.7551,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.98,
+        "matches_used": 5,
+        "avg_xg_for": 1.726,
+        "avg_xg_against": 1.494,
+        "sos_multiplier": 1.01,
         "squad_value_eur": 740000000,
         "squad_value_normalized": 0.587,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0133,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Premier League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0255,
-        "top8_probability": 0.2,
-        "playoff_probability": 0.6192,
-        "eliminated_probability": 0.1807,
-        "reach_r16_probability": 0.5517,
-        "reach_qf_probability": 0.258,
-        "reach_sf_probability": 0.118,
-        "reach_final_probability": 0.055,
-        "mean_rank": 16.18
-      }
+        "win_probability": 0.0145,
+        "top8_probability": 0.1978,
+        "playoff_probability": 0.6803,
+        "eliminated_probability": 0.122,
+        "reach_r16_probability": 0.6115,
+        "reach_qf_probability": 0.2635,
+        "reach_sf_probability": 0.1095,
+        "reach_final_probability": 0.0423,
+        "mean_rank": 15.1
+      },
+      "report": "Manchester United is rated from the English league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 1.3% to win the title. The last 5 matches (goals adj) average 1.726 goals for and 1.494 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Premier League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "VIL",
       "name": "Villarreal",
       "country": "ESP",
-      "elo": 1701.5,
-      "strength": 0.383,
+      "elo": 1725.5,
+      "strength": 0.3375,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1701.5,
-        "elo_normalized": 0.3687,
+        "elo": 1725.5,
+        "rating_seed": 1723.9,
+        "elo_normalized": 0.6933,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.948,
+        "matches_used": 5,
+        "avg_xg_for": 1.884,
+        "avg_xg_against": 1.579,
+        "sos_multiplier": 0.988,
         "squad_value_eur": 240000000,
         "squad_value_normalized": 0.1822,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0049,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 4,
+          "competitions": [
+            "Champions League",
+            "La Liga"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0075,
-        "top8_probability": 0.119,
-        "playoff_probability": 0.5992,
-        "eliminated_probability": 0.2818,
-        "reach_r16_probability": 0.3842,
-        "reach_qf_probability": 0.1487,
-        "reach_sf_probability": 0.0512,
-        "reach_final_probability": 0.0205,
-        "mean_rank": 19.01
-      }
+        "win_probability": 0.0053,
+        "top8_probability": 0.1037,
+        "playoff_probability": 0.6745,
+        "eliminated_probability": 0.2218,
+        "reach_r16_probability": 0.4497,
+        "reach_qf_probability": 0.1552,
+        "reach_sf_probability": 0.0473,
+        "reach_final_probability": 0.012,
+        "mean_rank": 18.09
+      },
+      "report": "Villarreal is rated from the Spanish league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.5% to win the title. The last 5 matches (goals adj) average 1.884 goals for and 1.579 against, with Champions League games counted twice and domestic games counted once. They have played 4 times in the last 28 days (Champions League, La Liga). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "ATM",
       "name": "Atlético Madrid",
       "country": "ESP",
-      "elo": 1857.7,
-      "strength": 0.5643,
+      "elo": 1748.8,
+      "strength": 0.3847,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1857.7,
-        "elo_normalized": 0.6721,
+        "elo": 1748.8,
+        "rating_seed": 1744.9,
+        "elo_normalized": 0.7657,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.124,
+        "matches_used": 5,
+        "avg_xg_for": 1.705,
+        "avg_xg_against": 1.106,
+        "sos_multiplier": 1.044,
         "squad_value_eur": 560000000,
         "squad_value_normalized": 0.4413,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0202,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "La Liga"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.04,
-        "top8_probability": 0.2732,
-        "playoff_probability": 0.6042,
-        "eliminated_probability": 0.1225,
-        "reach_r16_probability": 0.6342,
-        "reach_qf_probability": 0.3445,
-        "reach_sf_probability": 0.1735,
-        "reach_final_probability": 0.0862,
-        "mean_rank": 14.33
-      }
+        "win_probability": 0.0398,
+        "top8_probability": 0.331,
+        "playoff_probability": 0.6108,
+        "eliminated_probability": 0.0583,
+        "reach_r16_probability": 0.7618,
+        "reach_qf_probability": 0.4185,
+        "reach_sf_probability": 0.197,
+        "reach_final_probability": 0.0848,
+        "mean_rank": 12.25
+      },
+      "report": "Atlético Madrid is rated from the Spanish league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 2.0% to win the title. The last 5 matches (goals adj) average 1.705 goals for and 1.106 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, La Liga). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "BRU",
       "name": "Club Brugge",
       "country": "BEL",
-      "elo": 1762.4,
-      "strength": 0.4302,
+      "elo": 1638.6,
+      "strength": 0.2744,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1762.4,
-        "elo_normalized": 0.487,
+        "elo": 1638.6,
+        "rating_seed": 1625.0,
+        "elo_normalized": 0.4232,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.097,
+        "matches_used": 4,
+        "avg_xg_for": 2.032,
+        "avg_xg_against": 1.439,
+        "sos_multiplier": 1.079,
         "squad_value_eur": 210000000,
         "squad_value_normalized": 0.1579,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0015,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Pro League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.018,
-        "top8_probability": 0.1742,
-        "playoff_probability": 0.6078,
-        "eliminated_probability": 0.218,
-        "reach_r16_probability": 0.484,
-        "reach_qf_probability": 0.217,
-        "reach_sf_probability": 0.091,
-        "reach_final_probability": 0.037,
-        "mean_rank": 17.17
-      }
+        "win_probability": 0.0027,
+        "top8_probability": 0.1015,
+        "playoff_probability": 0.6617,
+        "eliminated_probability": 0.2367,
+        "reach_r16_probability": 0.4012,
+        "reach_qf_probability": 0.1235,
+        "reach_sf_probability": 0.033,
+        "reach_final_probability": 0.0077,
+        "mean_rank": 18.55
+      },
+      "report": "Club Brugge is rated from the Belgian league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.1% to win the title. The last 4 matches (goals adj) average 2.032 goals for and 1.439 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Pro League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "MCI",
       "name": "Manchester City",
       "country": "ENG",
-      "elo": 1924.1,
-      "strength": 0.7148,
+      "elo": 1791.8,
+      "strength": 0.4762,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1924.1,
-        "elo_normalized": 0.8011,
+        "elo": 1791.8,
+        "rating_seed": 1800.0,
+        "elo_normalized": 0.8993,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.083,
+        "matches_used": 5,
+        "avg_xg_for": 2.016,
+        "avg_xg_against": 1.372,
+        "sos_multiplier": 1.057,
         "squad_value_eur": 1180000000,
         "squad_value_normalized": 0.9433,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0543,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 4,
+          "competitions": [
+            "Champions League",
+            "League Cup",
+            "Premier League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0808,
-        "top8_probability": 0.3528,
-        "playoff_probability": 0.5627,
-        "eliminated_probability": 0.0845,
-        "reach_r16_probability": 0.7302,
-        "reach_qf_probability": 0.4417,
-        "reach_sf_probability": 0.2612,
-        "reach_final_probability": 0.1497,
-        "mean_rank": 12.63
-      }
+        "win_probability": 0.0953,
+        "top8_probability": 0.4622,
+        "playoff_probability": 0.5072,
+        "eliminated_probability": 0.0305,
+        "reach_r16_probability": 0.8615,
+        "reach_qf_probability": 0.5775,
+        "reach_sf_probability": 0.344,
+        "reach_final_probability": 0.1928,
+        "mean_rank": 10.33
+      },
+      "report": "Manchester City is rated from the English league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 5.4% to win the title. The last 5 matches (goals adj) average 2.016 goals for and 1.372 against, with Champions League games counted twice and domestic games counted once. They have played 4 times in the last 28 days (Champions League, League Cup, Premier League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run. The simulations finish 4.1 points above that market price."
     },
     {
       "id": "DOR",
       "name": "Borussia Dortmund",
       "country": "GER",
-      "elo": 1826.5,
-      "strength": 0.5256,
+      "elo": 1722.7,
+      "strength": 0.3573,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1826.5,
-        "elo_normalized": 0.6115,
+        "elo": 1722.7,
+        "rating_seed": 1732.8,
+        "elo_normalized": 0.6846,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.941,
+        "matches_used": 4,
+        "avg_xg_for": 1.617,
+        "avg_xg_against": 1.416,
+        "sos_multiplier": 1.042,
         "squad_value_eur": 480000000,
         "squad_value_normalized": 0.3765,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0114,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Bundesliga",
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.021,
-        "top8_probability": 0.178,
-        "playoff_probability": 0.627,
-        "eliminated_probability": 0.195,
-        "reach_r16_probability": 0.5225,
-        "reach_qf_probability": 0.2432,
-        "reach_sf_probability": 0.11,
-        "reach_final_probability": 0.0473,
-        "mean_rank": 16.77
-      }
+        "win_probability": 0.007,
+        "top8_probability": 0.14,
+        "playoff_probability": 0.688,
+        "eliminated_probability": 0.172,
+        "reach_r16_probability": 0.533,
+        "reach_qf_probability": 0.2013,
+        "reach_sf_probability": 0.0757,
+        "reach_final_probability": 0.023,
+        "mean_rank": 16.82
+      },
+      "report": "Borussia Dortmund is rated from the German league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 1.1% to win the title. The last 4 matches (goals adj) average 1.617 goals for and 1.416 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Bundesliga, Champions League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "LEN",
       "name": "Lens",
       "country": "FRA",
-      "elo": 1557.2,
-      "strength": 0.2474,
+      "elo": 1680.1,
+      "strength": 0.2987,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1557.2,
-        "elo_normalized": 0.0884,
+        "elo": 1680.1,
+        "rating_seed": 1690.0,
+        "elo_normalized": 0.5522,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.024,
+        "matches_used": 4,
+        "avg_xg_for": 1.547,
+        "avg_xg_against": 1.628,
+        "sos_multiplier": 1.013,
         "squad_value_eur": 155000000,
         "squad_value_normalized": 0.1134,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0025,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Ligue 1"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0013,
-        "top8_probability": 0.051,
-        "playoff_probability": 0.503,
-        "eliminated_probability": 0.446,
-        "reach_r16_probability": 0.2442,
-        "reach_qf_probability": 0.0745,
-        "reach_sf_probability": 0.0243,
-        "reach_final_probability": 0.0075,
-        "mean_rank": 22.43
-      }
+        "win_probability": 0.0008,
+        "top8_probability": 0.0403,
+        "playoff_probability": 0.5547,
+        "eliminated_probability": 0.405,
+        "reach_r16_probability": 0.2447,
+        "reach_qf_probability": 0.0612,
+        "reach_sf_probability": 0.0092,
+        "reach_final_probability": 0.002,
+        "mean_rank": 22.06
+      },
+      "report": "Lens is rated from the French league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.2% to win the title. The last 4 matches (goals adj) average 1.547 goals for and 1.628 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Ligue 1). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "AEK",
       "name": "AEK Athens",
       "country": "GRE",
-      "elo": 1571.4,
-      "strength": 0.2432,
+      "elo": 1573.7,
+      "strength": 0.2166,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1571.4,
-        "elo_normalized": 0.116,
+        "elo": 1573.7,
+        "rating_seed": 1575.0,
+        "elo_normalized": 0.2216,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.964,
+        "matches_used": 4,
+        "avg_xg_for": 1.394,
+        "avg_xg_against": 1.446,
+        "sos_multiplier": 0.946,
         "squad_value_eur": 48000000,
         "squad_value_normalized": 0.0267,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0005,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Super League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0015,
-        "top8_probability": 0.0415,
-        "playoff_probability": 0.4562,
-        "eliminated_probability": 0.5022,
-        "reach_r16_probability": 0.21,
-        "reach_qf_probability": 0.0622,
-        "reach_sf_probability": 0.0208,
-        "reach_final_probability": 0.006,
-        "mean_rank": 23.55
-      }
+        "win_probability": 0.0005,
+        "top8_probability": 0.0158,
+        "playoff_probability": 0.45,
+        "eliminated_probability": 0.5343,
+        "reach_r16_probability": 0.1643,
+        "reach_qf_probability": 0.0328,
+        "reach_sf_probability": 0.0065,
+        "reach_final_probability": 0.0018,
+        "mean_rank": 24.51
+      },
+      "report": "AEK Athens is rated from the Greek league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.0% to win the title. The last 4 matches (goals adj) average 1.394 goals for and 1.446 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Super League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "RBL",
       "name": "RB Leipzig",
       "country": "GER",
-      "elo": 1695.1,
-      "strength": 0.3957,
+      "elo": 1716.6,
+      "strength": 0.3406,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1695.1,
-        "elo_normalized": 0.3563,
+        "elo": 1716.6,
+        "rating_seed": 1718.6,
+        "elo_normalized": 0.6656,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.027,
+        "matches_used": 4,
+        "avg_xg_for": 1.484,
+        "avg_xg_against": 1.72,
+        "sos_multiplier": 0.983,
         "squad_value_eur": 360000000,
         "squad_value_normalized": 0.2794,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0035,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Bundesliga",
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0092,
-        "top8_probability": 0.0823,
-        "playoff_probability": 0.532,
-        "eliminated_probability": 0.3857,
-        "reach_r16_probability": 0.321,
-        "reach_qf_probability": 0.1225,
-        "reach_sf_probability": 0.0508,
-        "reach_final_probability": 0.0213,
-        "mean_rank": 21.06
-      }
+        "win_probability": 0.0005,
+        "top8_probability": 0.0355,
+        "playoff_probability": 0.536,
+        "eliminated_probability": 0.4285,
+        "reach_r16_probability": 0.2465,
+        "reach_qf_probability": 0.062,
+        "reach_sf_probability": 0.016,
+        "reach_final_probability": 0.0022,
+        "mean_rank": 22.46
+      },
+      "report": "RB Leipzig is rated from the German league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.3% to win the title. The last 4 matches (goals adj) average 1.484 goals for and 1.72 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Bundesliga, Champions League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "SAB",
       "name": "Sabah",
       "country": "AZE",
-      "elo": 1520.7,
-      "strength": 0.1951,
+      "elo": 1502.4,
+      "strength": 0.1652,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1520.7,
-        "elo_normalized": 0.0175,
+        "elo": 1502.4,
+        "rating_seed": 1485.0,
+        "elo_normalized": 0.0,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.984,
+        "matches_used": 2,
+        "avg_xg_for": 1.318,
+        "avg_xg_against": 1.779,
+        "sos_multiplier": 0.94,
         "squad_value_eur": 15000000,
         "squad_value_normalized": 0.0,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0005,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": false,
+          "matches": 1,
+          "competitions": [
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0003,
-        "top8_probability": 0.0355,
-        "playoff_probability": 0.4285,
-        "eliminated_probability": 0.536,
-        "reach_r16_probability": 0.1737,
-        "reach_qf_probability": 0.0465,
-        "reach_sf_probability": 0.0107,
-        "reach_final_probability": 0.0025,
-        "mean_rank": 24.27
-      }
+        "win_probability": 0.0,
+        "top8_probability": 0.0083,
+        "playoff_probability": 0.3385,
+        "eliminated_probability": 0.6532,
+        "reach_r16_probability": 0.1005,
+        "reach_qf_probability": 0.021,
+        "reach_sf_probability": 0.0027,
+        "reach_final_probability": 0.0008,
+        "mean_rank": 26.48
+      },
+      "report": "Sabah is rated from the Azerbaijani league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.0% to win the title. The last 2 matches (goals adj) average 1.318 goals for and 1.779 against, with Champions League games counted twice and domestic games counted once. No domestic calendar was matched, so rest is left neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "FEY",
       "name": "Feyenoord",
       "country": "NED",
-      "elo": 1736.0,
-      "strength": 0.4024,
+      "elo": 1634.5,
+      "strength": 0.2688,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1736.0,
-        "elo_normalized": 0.4357,
+        "elo": 1634.5,
+        "rating_seed": 1620.0,
+        "elo_normalized": 0.4105,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.184,
+        "matches_used": 2,
+        "avg_xg_for": 1.717,
+        "avg_xg_against": 1.431,
+        "sos_multiplier": 1.183,
         "squad_value_eur": 175000000,
         "squad_value_normalized": 0.1296,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0015,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": false,
+          "matches": 1,
+          "competitions": [
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0105,
-        "top8_probability": 0.1358,
-        "playoff_probability": 0.5925,
-        "eliminated_probability": 0.2717,
-        "reach_r16_probability": 0.4198,
-        "reach_qf_probability": 0.179,
-        "reach_sf_probability": 0.0732,
-        "reach_final_probability": 0.0255,
-        "mean_rank": 18.54
-      }
+        "win_probability": 0.0003,
+        "top8_probability": 0.067,
+        "playoff_probability": 0.6295,
+        "eliminated_probability": 0.3035,
+        "reach_r16_probability": 0.319,
+        "reach_qf_probability": 0.0727,
+        "reach_sf_probability": 0.0175,
+        "reach_final_probability": 0.0035,
+        "mean_rank": 19.84
+      },
+      "report": "Feyenoord is rated from the Dutch league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.1% to win the title. The last 2 matches (goals adj) average 1.717 goals for and 1.431 against, with Champions League games counted twice and domestic games counted once. No domestic calendar was matched, so rest is left neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "BOD",
       "name": "Bodø/Glimt",
       "country": "NOR",
-      "elo": 1732.5,
-      "strength": 0.3812,
+      "elo": 1600.2,
+      "strength": 0.236,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1732.5,
-        "elo_normalized": 0.4289,
+        "elo": 1600.2,
+        "rating_seed": 1580.0,
+        "elo_normalized": 0.3039,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.104,
+        "matches_used": 2,
+        "avg_xg_for": 1.302,
+        "avg_xg_against": 1.411,
+        "sos_multiplier": 1.101,
         "squad_value_eur": 55000000,
         "squad_value_normalized": 0.0324,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0025,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": false,
+          "matches": 1,
+          "competitions": [
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.006,
-        "top8_probability": 0.1108,
-        "playoff_probability": 0.5817,
-        "eliminated_probability": 0.3075,
-        "reach_r16_probability": 0.3745,
-        "reach_qf_probability": 0.1447,
-        "reach_sf_probability": 0.0522,
-        "reach_final_probability": 0.0163,
-        "mean_rank": 19.56
-      }
+        "win_probability": 0.0003,
+        "top8_probability": 0.0512,
+        "playoff_probability": 0.5653,
+        "eliminated_probability": 0.3835,
+        "reach_r16_probability": 0.2512,
+        "reach_qf_probability": 0.048,
+        "reach_sf_probability": 0.008,
+        "reach_final_probability": 0.0018,
+        "mean_rank": 21.61
+      },
+      "report": "Bodø/Glimt is rated from the Norwegian league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.2% to win the title. The last 2 matches (goals adj) average 1.302 goals for and 1.411 against, with Champions League games counted twice and domestic games counted once. No domestic calendar was matched, so rest is left neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "ROM",
       "name": "Roma",
       "country": "ITA",
-      "elo": 1814.2,
-      "strength": 0.503,
+      "elo": 1712.7,
+      "strength": 0.3424,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1814.2,
-        "elo_normalized": 0.5876,
+        "elo": 1712.7,
+        "rating_seed": 1736.5,
+        "elo_normalized": 0.6535,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.929,
+        "matches_used": 4,
+        "avg_xg_for": 1.445,
+        "avg_xg_against": 1.611,
+        "sos_multiplier": 0.989,
         "squad_value_eur": 400000000,
         "squad_value_normalized": 0.3117,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0069,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Serie A"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0107,
-        "top8_probability": 0.0585,
-        "playoff_probability": 0.5165,
-        "eliminated_probability": 0.425,
-        "reach_r16_probability": 0.3277,
-        "reach_qf_probability": 0.136,
-        "reach_sf_probability": 0.0573,
-        "reach_final_probability": 0.025,
-        "mean_rank": 22.13
-      }
+        "win_probability": 0.0018,
+        "top8_probability": 0.0272,
+        "playoff_probability": 0.5365,
+        "eliminated_probability": 0.4363,
+        "reach_r16_probability": 0.2602,
+        "reach_qf_probability": 0.0757,
+        "reach_sf_probability": 0.0215,
+        "reach_final_probability": 0.006,
+        "mean_rank": 22.71
+      },
+      "report": "Roma is rated from the Italian league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.7% to win the title. The last 4 matches (goals adj) average 1.445 goals for and 1.611 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Serie A). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "PSV",
       "name": "PSV Eindhoven",
       "country": "NED",
-      "elo": 1709.9,
-      "strength": 0.3886,
+      "elo": 1663.5,
+      "strength": 0.2931,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1709.9,
-        "elo_normalized": 0.385,
+        "elo": 1663.5,
+        "rating_seed": 1690.0,
+        "elo_normalized": 0.5006,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.001,
+        "matches_used": 4,
+        "avg_xg_for": 1.35,
+        "avg_xg_against": 1.467,
+        "sos_multiplier": 0.985,
         "squad_value_eur": 230000000,
         "squad_value_normalized": 0.1741,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0015,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Eredivisie"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.005,
-        "top8_probability": 0.0307,
-        "playoff_probability": 0.418,
-        "eliminated_probability": 0.5513,
-        "reach_r16_probability": 0.211,
-        "reach_qf_probability": 0.082,
-        "reach_sf_probability": 0.03,
-        "reach_final_probability": 0.0123,
-        "mean_rank": 24.48
-      }
+        "win_probability": 0.0008,
+        "top8_probability": 0.0123,
+        "playoff_probability": 0.332,
+        "eliminated_probability": 0.6558,
+        "reach_r16_probability": 0.1343,
+        "reach_qf_probability": 0.0318,
+        "reach_sf_probability": 0.0077,
+        "reach_final_probability": 0.002,
+        "mean_rank": 26.62
+      },
+      "report": "PSV Eindhoven is rated from the Dutch league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.1% to win the title. The last 4 matches (goals adj) average 1.35 goals for and 1.467 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Eredivisie). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "VIK",
       "name": "Viking",
       "country": "NOR",
-      "elo": 1511.7,
-      "strength": 0.1886,
+      "elo": 1514.4,
+      "strength": 0.1739,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1511.7,
-        "elo_normalized": 0.0,
+        "elo": 1514.4,
+        "rating_seed": 1510.0,
+        "elo_normalized": 0.0373,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.208,
+        "matches_used": 2,
+        "avg_xg_for": 1.905,
+        "avg_xg_against": 1.487,
+        "sos_multiplier": 1.22,
         "squad_value_eur": 22000000,
         "squad_value_normalized": 0.0057,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0005,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": false,
+          "matches": 1,
+          "competitions": [
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.001,
-        "top8_probability": 0.0203,
-        "playoff_probability": 0.3573,
-        "eliminated_probability": 0.6225,
-        "reach_r16_probability": 0.1475,
-        "reach_qf_probability": 0.0465,
-        "reach_sf_probability": 0.013,
-        "reach_final_probability": 0.0018,
-        "mean_rank": 25.93
-      }
+        "win_probability": 0.0,
+        "top8_probability": 0.0092,
+        "playoff_probability": 0.37,
+        "eliminated_probability": 0.6208,
+        "reach_r16_probability": 0.1323,
+        "reach_qf_probability": 0.0245,
+        "reach_sf_probability": 0.0057,
+        "reach_final_probability": 0.0005,
+        "mean_rank": 25.94
+      },
+      "report": "Viking is rated from the Norwegian league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.0% to win the title. The last 2 matches (goals adj) average 1.905 goals for and 1.487 against, with Champions League games counted twice and domestic games counted once. No domestic calendar was matched, so rest is left neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "FEN",
       "name": "Fenerbahçe",
       "country": "TUR",
-      "elo": 1681.4,
-      "strength": 0.3583,
+      "elo": 1576.8,
+      "strength": 0.2309,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1681.4,
-        "elo_normalized": 0.3296,
+        "elo": 1576.8,
+        "rating_seed": 1580.0,
+        "elo_normalized": 0.2312,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.118,
+        "matches_used": 4,
+        "avg_xg_for": 1.471,
+        "avg_xg_against": 1.345,
+        "sos_multiplier": 1.071,
         "squad_value_eur": 190000000,
         "squad_value_normalized": 0.1417,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0025,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Super Lig"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0022,
-        "top8_probability": 0.0253,
-        "playoff_probability": 0.3623,
-        "eliminated_probability": 0.6125,
-        "reach_r16_probability": 0.171,
-        "reach_qf_probability": 0.0545,
-        "reach_sf_probability": 0.017,
-        "reach_final_probability": 0.0043,
-        "mean_rank": 25.72
-      }
+        "win_probability": 0.0008,
+        "top8_probability": 0.0135,
+        "playoff_probability": 0.356,
+        "eliminated_probability": 0.6305,
+        "reach_r16_probability": 0.1452,
+        "reach_qf_probability": 0.0305,
+        "reach_sf_probability": 0.007,
+        "reach_final_probability": 0.0015,
+        "mean_rank": 26.15
+      },
+      "report": "Fenerbahçe is rated from the Turkish league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.2% to win the title. The last 4 matches (goals adj) average 1.471 goals for and 1.345 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Super Lig). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "INT",
       "name": "Inter",
       "country": "ITA",
-      "elo": 1890.9,
-      "strength": 0.6016,
+      "elo": 1723.5,
+      "strength": 0.3712,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1890.9,
-        "elo_normalized": 0.7366,
+        "elo": 1723.5,
+        "rating_seed": 1770.0,
+        "elo_normalized": 0.6871,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.042,
+        "matches_used": 4,
+        "avg_xg_for": 1.582,
+        "avg_xg_against": 1.592,
+        "sos_multiplier": 1.024,
         "squad_value_eur": 620000000,
         "squad_value_normalized": 0.4899,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0173,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Serie A"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.017,
-        "top8_probability": 0.05,
-        "playoff_probability": 0.4883,
-        "eliminated_probability": 0.4617,
-        "reach_r16_probability": 0.3312,
-        "reach_qf_probability": 0.1568,
-        "reach_sf_probability": 0.079,
-        "reach_final_probability": 0.039,
-        "mean_rank": 22.78
-      }
+        "win_probability": 0.0057,
+        "top8_probability": 0.0452,
+        "playoff_probability": 0.5597,
+        "eliminated_probability": 0.395,
+        "reach_r16_probability": 0.3723,
+        "reach_qf_probability": 0.1437,
+        "reach_sf_probability": 0.0495,
+        "reach_final_probability": 0.0163,
+        "mean_rank": 21.8
+      },
+      "report": "Inter is rated from the Italian league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 1.7% to win the title. The last 4 matches (goals adj) average 1.582 goals for and 1.592 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Serie A). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "POR",
       "name": "Porto",
       "country": "POR",
-      "elo": 1739.8,
-      "strength": 0.4261,
+      "elo": 1668.6,
+      "strength": 0.3037,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1739.8,
-        "elo_normalized": 0.4431,
+        "elo": 1668.6,
+        "rating_seed": 1700.0,
+        "elo_normalized": 0.5165,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.037,
+        "matches_used": 4,
+        "avg_xg_for": 1.477,
+        "avg_xg_against": 1.364,
+        "sos_multiplier": 1.107,
         "squad_value_eur": 310000000,
         "squad_value_normalized": 0.2389,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0035,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Primeira Liga"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0035,
-        "top8_probability": 0.0262,
-        "playoff_probability": 0.404,
-        "eliminated_probability": 0.5697,
-        "reach_r16_probability": 0.2182,
-        "reach_qf_probability": 0.0915,
-        "reach_sf_probability": 0.0357,
-        "reach_final_probability": 0.012,
-        "mean_rank": 25.06
-      }
+        "win_probability": 0.0008,
+        "top8_probability": 0.0145,
+        "playoff_probability": 0.427,
+        "eliminated_probability": 0.5585,
+        "reach_r16_probability": 0.1948,
+        "reach_qf_probability": 0.0545,
+        "reach_sf_probability": 0.014,
+        "reach_final_probability": 0.0018,
+        "mean_rank": 24.94
+      },
+      "report": "Porto is rated from the Portuguese league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.3% to win the title. The last 4 matches (goals adj) average 1.477 goals for and 1.364 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Primeira Liga). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "SLP",
       "name": "Slavia Prague",
       "country": "CZE",
-      "elo": 1586.3,
-      "strength": 0.2592,
+      "elo": 1527.7,
+      "strength": 0.1869,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1586.3,
-        "elo_normalized": 0.1449,
+        "elo": 1527.7,
+        "rating_seed": 1565.0,
+        "elo_normalized": 0.0786,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 0.943,
+        "matches_used": 2,
+        "avg_xg_for": 1.276,
+        "avg_xg_against": 1.97,
+        "sos_multiplier": 0.909,
         "squad_value_eur": 70000000,
         "squad_value_normalized": 0.0445,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0005,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": false,
+          "matches": 1,
+          "competitions": [
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0005,
-        "top8_probability": 0.0055,
-        "playoff_probability": 0.178,
-        "eliminated_probability": 0.8165,
-        "reach_r16_probability": 0.0707,
-        "reach_qf_probability": 0.0222,
-        "reach_sf_probability": 0.006,
-        "reach_final_probability": 0.0013,
-        "mean_rank": 29.81
-      }
+        "win_probability": 0.0,
+        "top8_probability": 0.0013,
+        "playoff_probability": 0.1067,
+        "eliminated_probability": 0.892,
+        "reach_r16_probability": 0.0302,
+        "reach_qf_probability": 0.004,
+        "reach_sf_probability": 0.001,
+        "reach_final_probability": 0.0,
+        "mean_rank": 31.55
+      },
+      "report": "Slavia Prague is rated from the Czech league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.0% to win the title. The last 2 matches (goals adj) average 1.276 goals for and 1.97 against, with Champions League games counted twice and domestic games counted once. No domestic calendar was matched, so rest is left neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "NAP",
       "name": "Napoli",
       "country": "ITA",
-      "elo": 1676.3,
-      "strength": 0.3904,
+      "elo": 1702.7,
+      "strength": 0.3374,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1676.3,
-        "elo_normalized": 0.3197,
+        "elo": 1702.7,
+        "rating_seed": 1741.1,
+        "elo_normalized": 0.6224,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.109,
+        "matches_used": 4,
+        "avg_xg_for": 1.434,
+        "avg_xg_against": 1.356,
+        "sos_multiplier": 1.104,
         "squad_value_eur": 430000000,
         "squad_value_normalized": 0.336,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0054,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Serie A"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0022,
-        "top8_probability": 0.028,
-        "playoff_probability": 0.3745,
-        "eliminated_probability": 0.5975,
-        "reach_r16_probability": 0.2025,
-        "reach_qf_probability": 0.0722,
-        "reach_sf_probability": 0.0265,
-        "reach_final_probability": 0.007,
-        "mean_rank": 25.38
-      }
+        "win_probability": 0.002,
+        "top8_probability": 0.019,
+        "playoff_probability": 0.4948,
+        "eliminated_probability": 0.4863,
+        "reach_r16_probability": 0.245,
+        "reach_qf_probability": 0.0737,
+        "reach_sf_probability": 0.0245,
+        "reach_final_probability": 0.0075,
+        "mean_rank": 23.91
+      },
+      "report": "Napoli is rated from the Italian league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.5% to win the title. The last 4 matches (goals adj) average 1.434 goals for and 1.356 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Serie A). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "LAS",
       "name": "LASK",
       "country": "AUT",
-      "elo": 1533.0,
-      "strength": 0.2076,
+      "elo": 1555.8,
+      "strength": 0.2027,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1533.0,
-        "elo_normalized": 0.0414,
+        "elo": 1555.8,
+        "rating_seed": 1585.0,
+        "elo_normalized": 0.1659,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.058,
+        "matches_used": 4,
+        "avg_xg_for": 1.547,
+        "avg_xg_against": 1.849,
+        "sos_multiplier": 1.024,
         "squad_value_eur": 28000000,
         "squad_value_normalized": 0.0105,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0005,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Bundesliga",
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0003,
-        "top8_probability": 0.0055,
-        "playoff_probability": 0.206,
-        "eliminated_probability": 0.7885,
-        "reach_r16_probability": 0.0693,
-        "reach_qf_probability": 0.0182,
-        "reach_sf_probability": 0.0043,
-        "reach_final_probability": 0.0008,
-        "mean_rank": 29.27
-      }
+        "win_probability": 0.0,
+        "top8_probability": 0.0027,
+        "playoff_probability": 0.2507,
+        "eliminated_probability": 0.7465,
+        "reach_r16_probability": 0.072,
+        "reach_qf_probability": 0.0127,
+        "reach_sf_probability": 0.0027,
+        "reach_final_probability": 0.0005,
+        "mean_rank": 28.42
+      },
+      "report": "LASK is rated from the Austrian league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.0% to win the title. The last 4 matches (goals adj) average 1.547 goals for and 1.849 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Bundesliga, Champions League). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "LIL",
       "name": "Lille",
       "country": "FRA",
-      "elo": 1699.5,
-      "strength": 0.3729,
+      "elo": 1661.8,
+      "strength": 0.2883,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1699.5,
-        "elo_normalized": 0.3648,
+        "elo": 1661.8,
+        "rating_seed": 1693.1,
+        "elo_normalized": 0.4953,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.129,
+        "matches_used": 4,
+        "avg_xg_for": 1.429,
+        "avg_xg_against": 1.612,
+        "sos_multiplier": 1.12,
         "squad_value_eur": 185000000,
         "squad_value_normalized": 0.1377,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0015,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Ligue 1"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0027,
-        "top8_probability": 0.014,
-        "playoff_probability": 0.341,
-        "eliminated_probability": 0.645,
-        "reach_r16_probability": 0.1708,
-        "reach_qf_probability": 0.0665,
-        "reach_sf_probability": 0.0238,
-        "reach_final_probability": 0.0065,
-        "mean_rank": 26.49
-      }
+        "win_probability": 0.0,
+        "top8_probability": 0.0095,
+        "playoff_probability": 0.2765,
+        "eliminated_probability": 0.714,
+        "reach_r16_probability": 0.1047,
+        "reach_qf_probability": 0.02,
+        "reach_sf_probability": 0.0043,
+        "reach_final_probability": 0.0003,
+        "mean_rank": 27.73
+      },
+      "report": "Lille is rated from the French league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.1% to win the title. The last 4 matches (goals adj) average 1.429 goals for and 1.612 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Ligue 1). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "GAL",
       "name": "Galatasaray",
       "country": "TUR",
-      "elo": 1650.7,
-      "strength": 0.3337,
+      "elo": 1617.2,
+      "strength": 0.2593,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1650.7,
-        "elo_normalized": 0.27,
+        "elo": 1617.2,
+        "rating_seed": 1650.0,
+        "elo_normalized": 0.3567,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.243,
+        "matches_used": 4,
+        "avg_xg_for": 1.653,
+        "avg_xg_against": 1.604,
+        "sos_multiplier": 1.284,
         "squad_value_eur": 200000000,
         "squad_value_normalized": 0.1498,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0025,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": true,
+          "matches": 3,
+          "competitions": [
+            "Champions League",
+            "Super Lig"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.002,
-        "top8_probability": 0.0115,
-        "playoff_probability": 0.3045,
-        "eliminated_probability": 0.684,
-        "reach_r16_probability": 0.1435,
-        "reach_qf_probability": 0.052,
-        "reach_sf_probability": 0.018,
-        "reach_final_probability": 0.0057,
-        "mean_rank": 27.3
-      }
+        "win_probability": 0.0003,
+        "top8_probability": 0.0057,
+        "playoff_probability": 0.249,
+        "eliminated_probability": 0.7452,
+        "reach_r16_probability": 0.1005,
+        "reach_qf_probability": 0.0248,
+        "reach_sf_probability": 0.0035,
+        "reach_final_probability": 0.001,
+        "mean_rank": 28.47
+      },
+      "report": "Galatasaray is rated from the Turkish league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.2% to win the title. The last 4 matches (goals adj) average 1.653 goals for and 1.604 against, with Champions League games counted twice and domestic games counted once. They have played 3 times in the last 28 days (Champions League, Super Lig). That is a normal month, so rest stays neutral. The injury feed has no confirmed absences on this run."
     },
     {
       "id": "SLO",
       "name": "Slovan Bratislava",
       "country": "SVK",
-      "elo": 1584.2,
-      "strength": 0.2517,
+      "elo": 1507.5,
+      "strength": 0.17,
       "injury_multiplier": 1.0,
       "signals": {
-        "elo": 1584.2,
-        "elo_normalized": 0.1408,
+        "elo": 1507.5,
+        "rating_seed": 1525.0,
+        "elo_normalized": 0.0158,
         "xg_form_ratio": 0.5,
         "form_source": "goals_adj",
-        "sos_multiplier": 1.252,
+        "matches_used": 2,
+        "avg_xg_for": 1.515,
+        "avg_xg_against": 1.601,
+        "sos_multiplier": 1.236,
         "squad_value_eur": 32000000,
         "squad_value_normalized": 0.0138,
-        "betting_implied_prob": null,
+        "betting_implied_prob": 0.0005,
+        "market_source": "polymarket",
         "injury_multiplier": 1.0,
+        "injuries": [],
+        "rest": {
+          "known": false,
+          "matches": 1,
+          "competitions": [
+            "Champions League"
+          ],
+          "multiplier": 1.0
+        },
         "effective_weights": {
-          "elo": 0.4375,
-          "xg_form": 0.375,
-          "squad_value": 0.1875
+          "elo": 0.22,
+          "xg_form": 0.33,
+          "squad_value": 0.1,
+          "betting_odds": 0.35
         }
       },
       "probabilities": {
-        "win_probability": 0.0005,
-        "top8_probability": 0.0095,
+        "win_probability": 0.0,
+        "top8_probability": 0.0035,
         "playoff_probability": 0.22,
-        "eliminated_probability": 0.7705,
-        "reach_r16_probability": 0.0895,
-        "reach_qf_probability": 0.0235,
-        "reach_sf_probability": 0.0073,
-        "reach_final_probability": 0.0027,
-        "mean_rank": 28.89
-      }
+        "eliminated_probability": 0.7765,
+        "reach_r16_probability": 0.073,
+        "reach_qf_probability": 0.015,
+        "reach_sf_probability": 0.0025,
+        "reach_final_probability": 0.0003,
+        "mean_rank": 29.06
+      },
+      "report": "Slovan Bratislava is rated from the Slovak league level, then from the Champions League matches already played. European titles and the five-year coefficient are not a strength bonus. Prediction markets put them at 0.0% to win the title. The last 2 matches (goals adj) average 1.515 goals for and 1.601 against, with Champions League games counted twice and domestic games counted once. No domestic calendar was matched, so rest is left neutral. The injury feed has no confirmed absences on this run."
     }
   ],
   "bracket": {
@@ -1972,64 +2581,64 @@
         "leg1_home": "BOD",
         "leg2_home": "BET",
         "advance": {
-          "BET": 0.5525,
-          "BOD": 0.4475
+          "BET": 0.653,
+          "BOD": 0.347
         }
       },
       {
         "leg1_home": "FEY",
         "leg2_home": "BAY",
         "advance": {
-          "BAY": 0.7035,
-          "FEY": 0.2965
+          "BAY": 0.8375,
+          "FEY": 0.1625
         }
       },
       {
         "leg1_home": "SAB",
         "leg2_home": "SHK",
         "advance": {
-          "SHK": 0.636,
-          "SAB": 0.364
+          "SHK": 0.616,
+          "SAB": 0.384
         }
       },
       {
         "leg1_home": "RBL",
         "leg2_home": "COM",
         "advance": {
-          "COM": 0.426,
-          "RBL": 0.574
+          "COM": 0.562,
+          "RBL": 0.438
         }
       },
       {
         "leg1_home": "AEK",
         "leg2_home": "MUN",
         "advance": {
-          "MUN": 0.6895,
-          "AEK": 0.3105
+          "MUN": 0.7525,
+          "AEK": 0.2475
         }
       },
       {
         "leg1_home": "LEN",
         "leg2_home": "VIL",
         "advance": {
-          "VIL": 0.5765,
-          "LEN": 0.4235
+          "VIL": 0.613,
+          "LEN": 0.387
         }
       },
       {
         "leg1_home": "DOR",
         "leg2_home": "ATM",
         "advance": {
-          "ATM": 0.5565,
-          "DOR": 0.4435
+          "ATM": 0.6355,
+          "DOR": 0.3645
         }
       },
       {
         "leg1_home": "MCI",
         "leg2_home": "BRU",
         "advance": {
-          "BRU": 0.353,
-          "MCI": 0.647
+          "BRU": 0.1975,
+          "MCI": 0.8025
         }
       }
     ],
@@ -2037,94 +2646,424 @@
       {
         "seed": "PSG",
         "advance": {
-          "PSG": 0.5575,
-          "BRU": 0.1265,
-          "MCI": 0.316
+          "PSG": 0.605,
+          "MCI": 0.3595,
+          "BRU": 0.0355
         }
       },
       {
         "seed": "RMA",
         "advance": {
-          "RMA": 0.736,
-          "BET": 0.1555,
-          "BOD": 0.1085
+          "RMA": 0.826,
+          "BET": 0.1275,
+          "BOD": 0.0465
         }
       },
       {
         "seed": "STU",
         "advance": {
-          "STU": 0.454,
-          "AEK": 0.1255,
-          "MUN": 0.4205
+          "STU": 0.493,
+          "AEK": 0.084,
+          "MUN": 0.423
         }
       },
       {
         "seed": "LIV",
         "advance": {
-          "LIV": 0.7375,
-          "RBL": 0.164,
-          "COM": 0.0985
+          "LIV": 0.764,
+          "COM": 0.1435,
+          "RBL": 0.0925
         }
       },
       {
         "seed": "BAR",
         "advance": {
-          "BAR": 0.5835,
-          "ATM": 0.2555,
-          "DOR": 0.161
+          "BAR": 0.724,
+          "DOR": 0.076,
+          "ATM": 0.2
         }
       },
       {
         "seed": "ARS",
         "advance": {
-          "ARS": 0.545,
-          "BAY": 0.3535,
-          "FEY": 0.1015
+          "ARS": 0.5435,
+          "BAY": 0.424,
+          "FEY": 0.0325
         }
       },
       {
         "seed": "AVL",
         "advance": {
-          "AVL": 0.6395,
-          "LEN": 0.1245,
-          "VIL": 0.236
+          "AVL": 0.6895,
+          "LEN": 0.0965,
+          "VIL": 0.214
         }
       },
       {
         "seed": "SCP",
         "advance": {
-          "SCP": 0.6015,
-          "SHK": 0.279,
-          "SAB": 0.1195
+          "SCP": 0.6455,
+          "SAB": 0.1185,
+          "SHK": 0.236
         }
       }
     ],
+    "rounds": [
+      {
+        "id": "playoff",
+        "label": "Play-off",
+        "ties": [
+          {
+            "left": {
+              "id": "BET",
+              "present": 1.0,
+              "advance": 0.653
+            },
+            "right": {
+              "id": "BOD",
+              "present": 1.0,
+              "advance": 0.347
+            },
+            "note": "Second leg at the higher seed"
+          },
+          {
+            "left": {
+              "id": "BAY",
+              "present": 1.0,
+              "advance": 0.8375
+            },
+            "right": {
+              "id": "FEY",
+              "present": 1.0,
+              "advance": 0.1625
+            },
+            "note": "Second leg at the higher seed"
+          },
+          {
+            "left": {
+              "id": "SHK",
+              "present": 1.0,
+              "advance": 0.616
+            },
+            "right": {
+              "id": "SAB",
+              "present": 1.0,
+              "advance": 0.384
+            },
+            "note": "Second leg at the higher seed"
+          },
+          {
+            "left": {
+              "id": "COM",
+              "present": 1.0,
+              "advance": 0.562
+            },
+            "right": {
+              "id": "RBL",
+              "present": 1.0,
+              "advance": 0.438
+            },
+            "note": "Second leg at the higher seed"
+          },
+          {
+            "left": {
+              "id": "MUN",
+              "present": 1.0,
+              "advance": 0.7525
+            },
+            "right": {
+              "id": "AEK",
+              "present": 1.0,
+              "advance": 0.2475
+            },
+            "note": "Second leg at the higher seed"
+          },
+          {
+            "left": {
+              "id": "VIL",
+              "present": 1.0,
+              "advance": 0.613
+            },
+            "right": {
+              "id": "LEN",
+              "present": 1.0,
+              "advance": 0.387
+            },
+            "note": "Second leg at the higher seed"
+          },
+          {
+            "left": {
+              "id": "ATM",
+              "present": 1.0,
+              "advance": 0.6355
+            },
+            "right": {
+              "id": "DOR",
+              "present": 1.0,
+              "advance": 0.3645
+            },
+            "note": "Second leg at the higher seed"
+          },
+          {
+            "left": {
+              "id": "BRU",
+              "present": 1.0,
+              "advance": 0.1975
+            },
+            "right": {
+              "id": "MCI",
+              "present": 1.0,
+              "advance": 0.8025
+            },
+            "note": "Second leg at the higher seed"
+          }
+        ]
+      },
+      {
+        "id": "r16",
+        "label": "Round of 16",
+        "ties": [
+          {
+            "left": {
+              "id": "PSG",
+              "present": 1.0,
+              "advance": 0.605
+            },
+            "right": {
+              "id": "MCI",
+              "present": 0.8025,
+              "advance": 0.3595
+            },
+            "note": "Most likely play-off winner on the right"
+          },
+          {
+            "left": {
+              "id": "RMA",
+              "present": 1.0,
+              "advance": 0.826
+            },
+            "right": {
+              "id": "BET",
+              "present": 0.653,
+              "advance": 0.1275
+            },
+            "note": "Most likely play-off winner on the right"
+          },
+          {
+            "left": {
+              "id": "STU",
+              "present": 1.0,
+              "advance": 0.493
+            },
+            "right": {
+              "id": "MUN",
+              "present": 0.7525,
+              "advance": 0.423
+            },
+            "note": "Most likely play-off winner on the right"
+          },
+          {
+            "left": {
+              "id": "LIV",
+              "present": 1.0,
+              "advance": 0.764
+            },
+            "right": {
+              "id": "COM",
+              "present": 0.562,
+              "advance": 0.1435
+            },
+            "note": "Most likely play-off winner on the right"
+          },
+          {
+            "left": {
+              "id": "BAR",
+              "present": 1.0,
+              "advance": 0.724
+            },
+            "right": {
+              "id": "ATM",
+              "present": 0.6355,
+              "advance": 0.2
+            },
+            "note": "Most likely play-off winner on the right"
+          },
+          {
+            "left": {
+              "id": "ARS",
+              "present": 1.0,
+              "advance": 0.5435
+            },
+            "right": {
+              "id": "BAY",
+              "present": 0.8375,
+              "advance": 0.424
+            },
+            "note": "Most likely play-off winner on the right"
+          },
+          {
+            "left": {
+              "id": "AVL",
+              "present": 1.0,
+              "advance": 0.6895
+            },
+            "right": {
+              "id": "VIL",
+              "present": 0.613,
+              "advance": 0.214
+            },
+            "note": "Most likely play-off winner on the right"
+          },
+          {
+            "left": {
+              "id": "SCP",
+              "present": 1.0,
+              "advance": 0.6455
+            },
+            "right": {
+              "id": "SHK",
+              "present": 0.616,
+              "advance": 0.236
+            },
+            "note": "Most likely play-off winner on the right"
+          }
+        ]
+      },
+      {
+        "id": "qf",
+        "label": "Quarter-final",
+        "ties": [
+          {
+            "left": {
+              "id": "PSG",
+              "present": 0.605,
+              "advance": 0.338
+            },
+            "right": {
+              "id": "RMA",
+              "present": 0.826,
+              "advance": 0.4315
+            },
+            "note": "Most likely club on each side"
+          },
+          {
+            "left": {
+              "id": "STU",
+              "present": 0.493,
+              "advance": 0.194
+            },
+            "right": {
+              "id": "LIV",
+              "present": 0.764,
+              "advance": 0.52
+            },
+            "note": "Most likely club on each side"
+          },
+          {
+            "left": {
+              "id": "BAR",
+              "present": 0.724,
+              "advance": 0.4295
+            },
+            "right": {
+              "id": "ARS",
+              "present": 0.5435,
+              "advance": 0.2585
+            },
+            "note": "Most likely club on each side"
+          },
+          {
+            "left": {
+              "id": "AVL",
+              "present": 0.6895,
+              "advance": 0.5135
+            },
+            "right": {
+              "id": "SCP",
+              "present": 0.6455,
+              "advance": 0.2295
+            },
+            "note": "Most likely club on each side"
+          }
+        ]
+      },
+      {
+        "id": "sf",
+        "label": "Semi-final",
+        "ties": [
+          {
+            "left": {
+              "id": "RMA",
+              "present": 0.4315,
+              "advance": 0.277
+            },
+            "right": {
+              "id": "LIV",
+              "present": 0.52,
+              "advance": 0.2245
+            },
+            "note": "Most likely club on each side"
+          },
+          {
+            "left": {
+              "id": "BAR",
+              "present": 0.4295,
+              "advance": 0.344
+            },
+            "right": {
+              "id": "AVL",
+              "present": 0.5135,
+              "advance": 0.1785
+            },
+            "note": "Most likely club on each side"
+          }
+        ]
+      },
+      {
+        "id": "final",
+        "label": "Final",
+        "ties": [
+          {
+            "left": {
+              "id": "RMA",
+              "present": 0.277,
+              "advance": 0.16
+            },
+            "right": {
+              "id": "BAR",
+              "present": 0.344,
+              "advance": 0.2035
+            },
+            "note": "Percent is the chance to win the final from this frozen table"
+          }
+        ]
+      }
+    ],
     "frozen_champion": {
-      "SCP": 0.05,
-      "PSG": 0.0985,
-      "BAR": 0.087,
-      "AVL": 0.0725,
-      "RMA": 0.1455,
-      "BAY": 0.064,
-      "ARS": 0.0955,
-      "ATM": 0.031,
-      "LIV": 0.152,
-      "STU": 0.022,
-      "MUN": 0.0325,
-      "FEY": 0.007,
-      "DOR": 0.013,
-      "MCI": 0.0515,
-      "LEN": 0.0045,
-      "AEK": 0.004,
-      "BET": 0.009,
-      "RBL": 0.009,
-      "COM": 0.0045,
-      "SHK": 0.0135,
-      "VIL": 0.017,
-      "BRU": 0.0085,
-      "BOD": 0.006,
-      "SAB": 0.002
+      "BAY": 0.0705,
+      "ARS": 0.096,
+      "BAR": 0.2035,
+      "RMA": 0.16,
+      "SCP": 0.017,
+      "STU": 0.015,
+      "PSG": 0.1335,
+      "LIV": 0.108,
+      "MCI": 0.0635,
+      "AVL": 0.0645,
+      "MUN": 0.023,
+      "AEK": 0.0005,
+      "ATM": 0.02,
+      "VIL": 0.008,
+      "DOR": 0.003,
+      "BRU": 0.0015,
+      "COM": 0.0035,
+      "RBL": 0.0015,
+      "BET": 0.0025,
+      "SHK": 0.002,
+      "SAB": 0.0005,
+      "LEN": 0.002,
+      "FEY": 0.0005
     },
-    "note": "Pairings if the league table froze on the current results. Title odds on the main table include the remaining matchdays."
+    "note": "Bracket if the league table froze tonight. Each card is who most often stands on that side, and their chance of going through. The title odds above still resimulate the remaining matchdays."
   }
 }

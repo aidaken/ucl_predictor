@@ -204,8 +204,78 @@ class TestSimulationSmoke(unittest.TestCase):
         self.assertAlmostEqual(win_total, 1.0, places=2)
         top8 = sum(row["top8_probability"] for row in result["clubs"].values())
         self.assertAlmostEqual(top8, 8.0, delta=0.05)
-        # Bayern's prior is the highest coefficient, so they should not be a long shot.
+        # Coefficient seeds still separate Bayern from Sabah when rating_seed is unset.
         self.assertGreater(result["clubs"]["BAY"]["win_probability"], result["clubs"]["SAB"]["win_probability"])
+
+
+class TestLeaguePrior(unittest.TestCase):
+    def test_titles_do_not_set_the_rating(self):
+        from src.elo import assign_rating_seeds
+
+        clubs = {
+            "RMA": {"country": "ESP", "coefficient": 144.5, "squad_value_eur": 100},
+            "BAR": {"country": "ESP", "coefficient": 80, "squad_value_eur": 100},
+            "SAB": {"country": "AZE", "coefficient": 140, "squad_value_eur": 100},
+        }
+        assign_rating_seeds(clubs)
+        self.assertEqual(clubs["RMA"]["rating_seed"], clubs["BAR"]["rating_seed"])
+        self.assertGreater(clubs["RMA"]["rating_seed"] - clubs["SAB"]["rating_seed"], 150)
+
+
+class TestMarkets(unittest.TestCase):
+    def test_placeholder_outcomes_are_ignored(self):
+        from src.clubs import ClubRegistry
+        from src.markets import probs_from_polymarket_event
+
+        clubs = {"BAR": {"name": "Barcelona", "aliases": []}, "RMA": {"name": "Real Madrid", "aliases": []}}
+        event = {"markets": [
+            {"groupItemTitle": "Barcelona", "outcomePrices": ["0.235", "0.765"]},
+            {"groupItemTitle": "Team H", "outcomePrices": ["0.5", "0.5"]},
+            {"groupItemTitle": "Other", "outcomePrices": ["0.01", "0.99"]},
+            {"groupItemTitle": "Real Madrid", "outcomePrices": ["0.105", "0.895"]},
+        ]}
+        probs = probs_from_polymarket_event(event, ClubRegistry(clubs))
+        self.assertEqual(set(probs), {"BAR", "RMA"})
+        self.assertAlmostEqual(probs["BAR"], 0.235)
+
+
+class TestRest(unittest.TestCase):
+    def test_busy_domestic_month_trims_rates(self):
+        from src.rest import rest_factors
+
+        fixtures = [
+            {"team_home": "ARS", "team_away": "ext:x", "status": "FT", "date": "2026-10-01", "stage": "domestic", "competition": "Premier League"},
+            {"team_home": "ext:y", "team_away": "ARS", "status": "FT", "date": "2026-10-05", "stage": "domestic", "competition": "Premier League"},
+            {"team_home": "ARS", "team_away": "MCI", "status": "FT", "date": "2026-10-08", "stage": "league", "competition": "UCL"},
+            {"team_home": "ARS", "team_away": "ext:z", "status": "FT", "date": "2026-10-12", "stage": "domestic", "competition": "Premier League"},
+            {"team_home": "ext:q", "team_away": "ARS", "status": "FT", "date": "2026-10-14", "stage": "domestic", "competition": "League Cup"},
+        ]
+        report = rest_factors(["ARS", "SAB"], fixtures, as_of="2026-10-15")
+        self.assertLess(report["ARS"]["multiplier"], 1.0)
+        self.assertTrue(report["ARS"]["known"])
+        self.assertEqual(report["SAB"]["multiplier"], 1.0)
+        self.assertFalse(report["SAB"]["known"])
+
+
+class TestBracketShape(unittest.TestCase):
+    def test_rounds_cover_the_tree(self):
+        from src.simulate import project_bracket
+
+        clubs = json.loads((ROOT / "data" / "clubs.json").read_text(encoding="utf-8"))["clubs"]
+        fixtures = json.loads((ROOT / "data" / "fixtures.json").read_text(encoding="utf-8"))["fixtures"]
+        from src.table import standings_from_fixtures
+
+        ids = list(clubs)
+        order = [row["club_id"] for row in standings_from_fixtures(
+            ids, fixtures, {cid: float(clubs[cid].get("coefficient") or 0) for cid in ids},
+        )]
+        bracket = project_bracket(clubs, order, n=12, seed=3)
+        self.assertEqual([rnd["id"] for rnd in bracket["rounds"]], ["playoff", "r16", "qf", "sf", "final"])
+        self.assertEqual(len(bracket["rounds"][0]["ties"]), 8)
+        self.assertEqual(len(bracket["rounds"][-1]["ties"]), 1)
+        final = bracket["rounds"][-1]["ties"][0]
+        self.assertIsNotNone(final["left"])
+        self.assertIsNotNone(final["right"])
 
 
 if __name__ == "__main__":

@@ -152,15 +152,44 @@ def _higher_seed(a: str, b: str, order: list[str]) -> tuple[str, str]:
     return (a, b) if order.index(a) < order.index(b) else (b, a)
 
 
+def _play_final(
+    a: str,
+    b: str,
+    clubs: dict[str, dict[str, Any]],
+    rng: random.Random,
+) -> str:
+    lam_a, lam_b = _neutral_lambda(clubs, a, b)
+    ga, gb = sample_score(lam_a, lam_b, rng)
+    if ga == gb:
+        et_a, et_b = sample_score(lam_a * config.ET_FRACTION, lam_b * config.ET_FRACTION, rng)
+        ga += et_a
+        gb += et_b
+    if ga != gb:
+        return a if ga > gb else b
+    prob_a = pens_probability(float(clubs[a].get("elo") or 1600), float(clubs[b].get("elo") or 1600))
+    return a if rng.random() < prob_a else b
+
+
+def _top_side(counts: dict[str, int], wins: dict[str, int], n: int) -> dict[str, Any] | None:
+    if not counts:
+        return None
+    club_id, present = max(counts.items(), key=lambda item: item[1])
+    return {
+        "id": club_id,
+        "present": round(present / n, 4),
+        "advance": round(wins.get(club_id, 0) / n, 4),
+    }
+
+
 def project_bracket(
     clubs: dict[str, dict[str, Any]],
     order: list[str],
     n: int,
     seed: int = 42,
-) -> dict[str, list[dict[str, Any]]]:
+) -> dict[str, Any]:
     """
     Knockout tree if today's table never moved.
-    Advance rates are conditional on these pairings, not on the full season sim.
+    Later rounds name the club most often on each side of the slot.
     """
     lambdas = _lambdas_for(clubs)
     rng = random.Random(seed)
@@ -183,7 +212,18 @@ def project_bracket(
             "seed": seed_club,
             "pair_index": pair_i,
             "wins": {seed_club: 0},
+            "opponents": {},
         })
+
+    qf_sides = [({}, {}) for _ in QF_PAIRS]
+    qf_wins: list[dict[str, int]] = [{} for _ in QF_PAIRS]
+    sf_sides = [({}, {}) for _ in SF_PAIRS]
+    sf_wins: list[dict[str, int]] = [{} for _ in SF_PAIRS]
+    final_sides: tuple[dict[str, int], dict[str, int]] = ({}, {})
+    final_wins: dict[str, int] = {}
+
+    def _bump(bucket: dict[str, int], club_id: str) -> None:
+        bucket[club_id] = bucket.get(club_id, 0) + 1
 
     for _ in range(n):
         winners = []
@@ -196,28 +236,32 @@ def project_bracket(
         for slot in fixed_r16:
             opponent = winners[slot["pair_index"]]
             slot["wins"].setdefault(opponent, 0)
+            _bump(slot["opponents"], opponent)
             winner = play_two_legged(slot["seed"], opponent, lambdas, clubs, rng)
             slot["wins"][winner] = slot["wins"].get(winner, 0) + 1
             r16_winners.append(winner)
         qf = []
-        for i, j in QF_PAIRS:
+        for idx, (i, j) in enumerate(QF_PAIRS):
             a, b = r16_winners[i], r16_winners[j]
+            _bump(qf_sides[idx][0], a)
+            _bump(qf_sides[idx][1], b)
             better, worse = _higher_seed(a, b, order)
-            qf.append(play_two_legged(better, worse, lambdas, clubs, rng))
+            winner = play_two_legged(better, worse, lambdas, clubs, rng)
+            _bump(qf_wins[idx], winner)
+            qf.append(winner)
         sf = []
-        for i, j in SF_PAIRS:
+        for idx, (i, j) in enumerate(SF_PAIRS):
             a, b = qf[i], qf[j]
+            _bump(sf_sides[idx][0], a)
+            _bump(sf_sides[idx][1], b)
             better, worse = _higher_seed(a, b, order)
-            sf.append(play_two_legged(better, worse, lambdas, clubs, rng))
-        lam_a, lam_b = _neutral_lambda(clubs, sf[0], sf[1])
-        ga, gb = sample_score(lam_a, lam_b, rng)
-        if ga == gb:
-            champ = sf[0] if rng.random() < pens_probability(
-                float(clubs[sf[0]].get("elo") or 1600),
-                float(clubs[sf[1]].get("elo") or 1600),
-            ) else sf[1]
-        else:
-            champ = sf[0] if ga > gb else sf[1]
+            winner = play_two_legged(better, worse, lambdas, clubs, rng)
+            _bump(sf_wins[idx], winner)
+            sf.append(winner)
+        _bump(final_sides[0], sf[0])
+        _bump(final_sides[1], sf[1])
+        champ = _play_final(sf[0], sf[1], clubs, rng)
+        _bump(final_wins, champ)
         final_counts[champ] = final_counts.get(champ, 0) + 1
 
     def pack_playoff() -> list[dict[str, Any]]:
@@ -242,19 +286,76 @@ def project_bracket(
                 for club, wins in slot["wins"].items()
                 if wins > 0
             }
-            packed.append({
-                "seed": slot["seed"],
-                "advance": advance,
-            })
+            packed.append({"seed": slot["seed"], "advance": advance})
         return packed
+
+    def side(club_id: str, advance: float, present: float = 1.0) -> dict[str, Any]:
+        return {"id": club_id, "present": present, "advance": advance}
+
+    playoff_ties = []
+    for tie in fixed_playoff:
+        better, worse = tie["clubs"]
+        playoff_ties.append({
+            "left": side(better, round(tie["wins"][better] / n, 4)),
+            "right": side(worse, round(tie["wins"][worse] / n, 4)),
+            "note": "Second leg at the higher seed",
+        })
+
+    r16_ties = []
+    for slot in fixed_r16:
+        opponent = _top_side(slot["opponents"], slot["wins"], n)
+        r16_ties.append({
+            "left": side(slot["seed"], round(slot["wins"].get(slot["seed"], 0) / n, 4)),
+            "right": opponent,
+            "note": "Most likely play-off winner on the right",
+        })
+
+    def pack_round(sides: list[tuple[dict[str, int], dict[str, int]]], wins: list[dict[str, int]], note: str):
+        ties = []
+        for idx, (left_counts, right_counts) in enumerate(sides):
+            ties.append({
+                "left": _top_side(left_counts, wins[idx], n),
+                "right": _top_side(right_counts, wins[idx], n),
+                "note": note,
+            })
+        return ties
+
+    rounds = [
+        {"id": "playoff", "label": "Play-off", "ties": playoff_ties},
+        {"id": "r16", "label": "Round of 16", "ties": r16_ties},
+        {
+            "id": "qf",
+            "label": "Quarter-final",
+            "ties": pack_round(qf_sides, qf_wins, "Most likely club on each side"),
+        },
+        {
+            "id": "sf",
+            "label": "Semi-final",
+            "ties": pack_round(sf_sides, sf_wins, "Most likely club on each side"),
+        },
+        {
+            "id": "final",
+            "label": "Final",
+            "ties": [{
+                "left": _top_side(final_sides[0], final_wins, n),
+                "right": _top_side(final_sides[1], final_wins, n),
+                "note": "Percent is the chance to win the final from this frozen table",
+            }],
+        },
+    ]
 
     return {
         "playoff": pack_playoff(),
         "round_of_16": pack_r16(),
+        "rounds": rounds,
         "frozen_champion": {
             club: round(count / n, 4) for club, count in final_counts.items()
         },
-        "note": "Pairings if the league table froze on the current results. Title odds on the main table include the remaining matchdays.",
+        "note": (
+            "Bracket if the league table froze tonight. Each card is who most often "
+            "stands on that side, and their chance of going through. "
+            "The title odds above still resimulate the remaining matchdays."
+        ),
     }
 
 

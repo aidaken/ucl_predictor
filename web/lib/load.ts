@@ -13,7 +13,7 @@ export async function loadPayload(): Promise<Payload | null> {
   const url = process.env.DATABASE_URL;
   if (url) {
     try {
-      const sql = neon(url);
+      const sql = neon(url, { fetchOptions: { cache: "no-store" } });
       const rows = await sql`SELECT payload FROM runs ORDER BY id DESC LIMIT 1`;
       const payload = rows[0]?.payload as Payload | undefined;
       if (payload?.clubs) return payload;

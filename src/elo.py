@@ -56,15 +56,37 @@ def update_ratings(
     return changes
 
 
+def assign_rating_seeds(clubs: dict[str, dict[str, Any]]) -> None:
+    """
+    Seed each club from the league it plays in, plus a small squad-value gap
+    inside that league. The UEFA coefficient is not used.
+    """
+    by_country: dict[str, list[str]] = {}
+    for cid, club in clubs.items():
+        by_country.setdefault(str(club.get("country") or ""), []).append(cid)
+    for country, ids in by_country.items():
+        base = float(config.LEAGUE_ELO.get(country, 1600))
+        values = [float(clubs[cid].get("squad_value_eur") or 0) for cid in ids]
+        lo, hi = min(values), max(values)
+        for cid, value in zip(ids, values):
+            if hi == lo or value <= 0:
+                bump = 0.0
+            else:
+                bump = ((value - lo) / (hi - lo) - 0.5) * config.LEAGUE_SQUAD_SPREAD
+            clubs[cid]["rating_seed"] = round(base + bump, 1)
+
+
 def replay_from_seed(
     clubs: dict[str, dict[str, Any]],
     fixtures: list[dict[str, Any]],
 ) -> dict[str, float]:
-    """Reset every club to elo_seed, then replay UCL results. Returns the deltas."""
-    work = {
-        cid: {"elo": float(club.get("elo_seed") or club.get("elo") or config.ELO_BASELINE)}
-        for cid, club in clubs.items()
-    }
+    """Reset every club to its rating seed, then replay UCL results."""
+    work = {}
+    for cid, club in clubs.items():
+        seed = club.get("rating_seed")
+        if seed is None:
+            seed = club.get("elo_seed") or club.get("elo") or config.ELO_BASELINE
+        work[cid] = {"elo": float(seed)}
     before = {cid: work[cid]["elo"] for cid in work}
     update_ratings(work, fixtures)
     for cid, row in work.items():

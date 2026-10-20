@@ -13,10 +13,14 @@ from datetime import datetime, timezone
 from typing import Any
 
 import config
+from src.calendar import load_other_fixtures
 from src.clubs import ClubRegistry
-from src.elo import replay_from_seed
+from src.elo import assign_rating_seeds, replay_from_seed
 from src.injury import calculate_multipliers
-from src.odds import get_implied_probs
+from src.markets import CACHE_PATH as MARKET_CACHE
+from src.markets import get_market_probs
+from src.reports import injury_notes, write_report
+from src.rest import rest_factors
 from src.simulate import run as simulate
 from src.store import upsert_run
 from src.strength import compute_strength, shrink_xg_toward_neutral
@@ -89,6 +93,7 @@ def build_payload(
     stats: dict | None = None,
     injuries: dict | None = None,
     domestic: list[dict[str, Any]] | None = None,
+    refresh_markets: bool = True,
 ) -> dict[str, Any]:
     stats = stats or {}
     injuries = injuries or {}
@@ -96,9 +101,11 @@ def build_payload(
 
     for club in clubs.values():
         club["elo"] = float(club.get("elo_seed") or club["elo"])
+    assign_rating_seeds(clubs)
     replay_from_seed(clubs, fixtures)
 
-    form_fixtures = list(fixtures) + list(domestic or [])
+    other = load_other_fixtures()
+    form_fixtures = list(fixtures) + list(other) + list(domestic or [])
     ratios, form_meta = calculate_form_ratios(form_fixtures, ids)
     coverage = sum(1 for tid in ids if form_meta.get(tid, {}).get("has_xg_data")) / max(len(ids), 1)
     for tid in ids:
@@ -114,7 +121,9 @@ def build_payload(
             clubs[cid]["squad_value_eur"] = value
 
     registry = ClubRegistry(clubs)
-    betting = get_implied_probs(registry, ids) or {}
+    betting, market_source = get_market_probs(
+        registry, ids, refresh=refresh_markets or not MARKET_CACHE.exists(),
+    )
     betting = normalize_betting_probs(betting, [tid for tid in ids if tid in betting]) if betting else {}
     # Renormalize across clubs that have a price. Missing clubs get no odds signal.
     if betting:
@@ -122,6 +131,7 @@ def build_payload(
         betting = {tid: value / total for tid, value in betting.items()} if total else {}
 
     multipliers = calculate_multipliers(injuries, stats, ids)
+    rest = rest_factors(ids, form_fixtures, as_of=config.AS_OF)
     elo_norm = normalize_minmax({cid: float(clubs[cid]["elo"]) for cid in ids})
     value_norm = normalize_minmax({cid: float(values.get(cid, 0)) for cid in ids if values.get(cid)})
     equal_share = 1.0 / len(ids)
@@ -156,17 +166,25 @@ def build_payload(
         clubs[cid]["squad_value_normalized"] = value_norm.get(cid)
         clubs[cid]["betting_implied_prob"] = betting.get(cid)
         clubs[cid]["betting_equal_share"] = equal_share
+        clubs[cid]["rest_multiplier"] = rest.get(cid, {}).get("multiplier", 1.0)
         clubs[cid]["effective_weights"] = weights
         clubs[cid]["signals"] = {
             "elo": clubs[cid]["elo"],
+            "rating_seed": clubs[cid].get("rating_seed"),
             "elo_normalized": round(elo_norm[cid], 4),
             "xg_form_ratio": ratios.get(cid, 0.5),
             "form_source": clubs[cid]["form_source"],
+            "matches_used": clubs[cid]["form_matches"],
+            "avg_xg_for": clubs[cid]["avg_xg_for"],
+            "avg_xg_against": clubs[cid]["avg_xg_against"],
             "sos_multiplier": meta.get("sos_multiplier", 1.0),
             "squad_value_eur": clubs[cid].get("squad_value_eur"),
             "squad_value_normalized": None if not has_value else round(value_norm[cid], 4),
             "betting_implied_prob": None if not has_betting else round(betting[cid], 4),
+            "market_source": market_source,
             "injury_multiplier": multipliers.get(cid, 1.0),
+            "injuries": injury_notes(injuries.get(cid)),
+            "rest": rest.get(cid, {}),
             "effective_weights": weights,
         }
 
@@ -201,6 +219,13 @@ def build_payload(
             "injury_multiplier": clubs[cid]["injury_multiplier"],
             "signals": clubs[cid]["signals"],
             "probabilities": probs,
+            "report": write_report(
+                clubs[cid],
+                market=betting.get(cid),
+                model_title=probs["win_probability"],
+                rest=rest.get(cid, {}),
+                injuries=injury_notes(injuries.get(cid)),
+            ),
         })
 
     return {
@@ -213,9 +238,12 @@ def build_payload(
             "base_xg": config.BASE_XG,
             "competition": "UEFA Champions League 2026/27",
             "data_sources": {
-                "fixtures": "uefa league phase through 14 Oct 2026, plus API-Football when --live",
-                "elo": "UEFA coefficient prior (1480 + 3.6 * coefficient), replayed through played UCL matches",
-                "health": "API-Football domestic league + UCL, 36 clubs only",
+                "fixtures": "UEFA league phase through 14 Oct 2026",
+                "other_competitions": "ESPN domestic leagues and cups, 15 Sep–15 Oct 2026",
+                "elo": "Domestic league prior plus squad value inside that league, replayed through played UCL matches. UEFA coefficient is a table tie-break only.",
+                "markets": market_source,
+                "health": "API-Football domestic league plus UCL, 36 clubs only. Empty until a key is set.",
+                "rest": "Finished matches in the 28 days before 15 Oct 2026",
             },
         },
         "table": table_rows,
@@ -250,6 +278,7 @@ def main() -> None:
         stats=stats,
         injuries=injuries,
         domestic=domestic,
+        refresh_markets=not args.demo,
     )
     out = DATA_DIR / "predictions.json"
     write_json(out, payload)
