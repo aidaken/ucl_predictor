@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "played_through": "2026-10-14",
+    "played_through": "2026-10-21",
     "matchdays_played": 2,
-    "source": "UEFA 2026/27 league phase fixtures and results"
+    "source": "UEFA 2026/27 league phase + ESPN live scores for MD3"
   },
   "fixtures": [
     {
@@ -443,10 +443,10 @@
       "date": "2026-10-20",
       "team_home": "FEN",
       "team_away": "SLP",
-      "score_home": null,
-      "score_away": null,
+      "score_home": 2,
+      "score_away": 2,
       "winner": null,
-      "status": "NS",
+      "status": "FT",
       "stage": "league"
     },
     {
@@ -455,10 +455,10 @@
       "date": "2026-10-20",
       "team_home": "SAB",
       "team_away": "DOR",
-      "score_home": null,
-      "score_away": null,
-      "winner": null,
-      "status": "NS",
+      "score_home": 1,
+      "score_away": 2,
+      "winner": "DOR",
+      "status": "FT",
       "stage": "league"
     },
     {
@@ -467,10 +467,10 @@
       "date": "2026-10-20",
       "team_home": "ROM",
       "team_away": "SLO",
-      "score_home": null,
-      "score_away": null,
-      "winner": null,
-      "status": "NS",
+      "score_home": 4,
+      "score_away": 0,
+      "winner": "ROM",
+      "status": "FT",
       "stage": "league"
     },
     {
@@ -479,10 +479,10 @@
       "date": "2026-10-20",
       "team_home": "POR",
       "team_away": "PSV",
-      "score_home": null,
-      "score_away": null,
-      "winner": null,
-      "status": "NS",
+      "score_home": 0,
+      "score_away": 1,
+      "winner": "PSV",
+      "status": "FT",
       "stage": "league"
     },
     {
@@ -491,10 +491,10 @@
       "date": "2026-10-20",
       "team_home": "LIV",
       "team_away": "VIL",
-      "score_home": null,
-      "score_away": null,
-      "winner": null,
-      "status": "NS",
+      "score_home": 4,
+      "score_away": 3,
+      "winner": "LIV",
+      "status": "FT",
       "stage": "league"
     },
     {
@@ -503,10 +503,10 @@
       "date": "2026-10-20",
       "team_home": "MCI",
       "team_away": "AEK",
-      "score_home": null,
-      "score_away": null,
-      "winner": null,
-      "status": "NS",
+      "score_home": 5,
+      "score_away": 1,
+      "winner": "MCI",
+      "status": "FT",
       "stage": "league"
     },
     {
@@ -515,10 +515,10 @@
       "date": "2026-10-20",
       "team_home": "PSG",
       "team_away": "BAR",
-      "score_home": null,
-      "score_away": null,
-      "winner": null,
-      "status": "NS",
+      "score_home": 4,
+      "score_away": 2,
+      "winner": "PSG",
+      "status": "FT",
       "stage": "league"
     },
     {
@@ -527,10 +527,10 @@
       "date": "2026-10-20",
       "team_home": "NAP",
       "team_away": "BOD",
-      "score_home": null,
-      "score_away": null,
-      "winner": null,
-      "status": "NS",
+      "score_home": 4,
+      "score_away": 3,
+      "winner": "NAP",
+      "status": "FT",
       "stage": "league"
     },
     {
@@ -539,10 +539,10 @@
       "date": "2026-10-20",
       "team_home": "STU",
       "team_away": "ATM",
-      "score_home": null,
-      "score_away": null,
+      "score_home": 1,
+      "score_away": 1,
       "winner": null,
-      "status": "NS",
+      "status": "FT",
       "stage": "league"
     },
     {
@@ -551,10 +551,10 @@
       "date": "2026-10-21",
       "team_home": "COM",
       "team_away": "MUN",
-      "score_home": null,
-      "score_away": null,
-      "winner": null,
-      "status": "NS",
+      "score_home": 4,
+      "score_away": 0,
+      "winner": "COM",
+      "status": "FT",
       "stage": "league"
     },
     {
@@ -563,10 +563,10 @@
       "date": "2026-10-21",
       "team_home": "LIL",
       "team_away": "GAL",
-      "score_home": null,
-      "score_away": null,
-      "winner": null,
-      "status": "NS",
+      "score_home": 2,
+      "score_away": 4,
+      "winner": "GAL",
+      "status": "FT",
       "stage": "league"
     },
     {
